@@ -10,13 +10,13 @@ a {
 #foto {
     border-radius: 50%;
 }
-#pag2 {
+.pag {
     background-color: rgb(43, 94, 206);
     color: whitesmoke;
     padding: 15px;
     border-radius: 10px;
     font-weight: 700;
 }
-#pag2:hover {
+.pag:hover {
     background-color: black;
 }

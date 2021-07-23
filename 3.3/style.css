@@ -2,6 +2,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 .teste {
     background-color: black;
     color: whitesmoke;
@@ -33,4 +37,15 @@ body {
 }
 .border {
     border: 5px solid black;
+}
+
+.pag {
+    background-color: rgb(43, 94, 206);
+    color: whitesmoke;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+.pag:hover {
+    background-color: black;
 }
