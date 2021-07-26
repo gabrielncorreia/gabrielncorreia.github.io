@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ol li {
+    background-color: yellow;
+}
+
+ol li:nth-child(odd) {
+    text-transform: uppercase;
+}
+
+ol li:nth-child(even) {
+    color: green;
+}
+
+h1, h2, h3 {
+    color: red;
+}
+
+h1 em, h2 em, h3 em {
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: bold;
+}
+
+ul.lang li:nth-child(1), li:nth-child(2), li:nth-child(3){
+    color: blue;
+}
+
+.rosa {
+    background-color: pink;
+}
+
+#aliados li a:hover {
+  font-weight: 700;
+}
+
+#stack:hover {
+  color: orange;
+}
+
+#w3:hover {
+  color: green;
+}
+
+#MDN:hover {
+  color: black;
+}
+
+#Dev:hover {
+  color: rgb(163, 163, 0);
+}
+
+#trybe:hover {
+  color: green;
+}
+
+/* Ou: 
+
+#aliados li a[href*="stackoverflow"] {
+  color: orange;
+}
+
+#aliados li a[href*="w3schools"] {
+  color: green;
+}
+
+e etc...
+
+*/

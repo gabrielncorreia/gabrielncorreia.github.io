@@ -49,3 +49,57 @@ a {
 .pag:hover {
     background-color: black;
 }
+
+/* ------------------ */
+
+div:hover {
+    border: 6px solid black;
+}
+
+div:nth-of-type(6) {
+    background-color: red;
+}
+
+div:nth-of-type(7) {
+    background-color: blueviolet;
+}
+
+div:nth-of-type(8) {
+    background-color: green;
+    height: 100px;
+    padding-top: 40px;
+}
+
+div:nth-of-type(9) {
+    background-color: gray;
+}
+
+div:nth-of-type(10) {
+    background-color: rgb(183, 232, 255);
+}
+
+div:nth-of-type(6) > h3 {
+    color: whitesmoke;
+}
+
+div:nth-of-type(7) > h3 {
+    color: whitesmoke;
+}
+
+div:nth-of-type(8) > h3 {
+    color: whitesmoke;
+}
+
+div:nth-of-type(9) > h3 {
+    color: whitesmoke;
+}
+
+div:nth-of-type(10) > h3 {
+    color: whitesmoke;
+}
+
+div:nth-of-type(odd) > h3 {
+    font-style: italic;
+    color: black;
+}
+
