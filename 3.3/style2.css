@@ -1,0 +1,25 @@
+body {
+   font-family: Arial, Helvetica, sans-serif; 
+}
+
+h1, p {
+    text-align: center;
+}
+
+li:hover {
+    background-color: black;
+    color: white;
+}
+
+li:active {
+    font-family: monospace;
+    font-size: 20pt;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+div:hover {
+    border: violet solid;
+}
