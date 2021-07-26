@@ -1,0 +1,22 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+#foto {
+    border-radius: 50%;
+}
+.pag {
+    background-color: rgb(43, 94, 206);
+    color: whitesmoke;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+.pag:hover {
+    background-color: black;
+}
