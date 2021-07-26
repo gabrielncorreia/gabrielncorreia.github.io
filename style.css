@@ -27,7 +27,7 @@ a {
     position: absolute;
     top: 15%;
     right: 1%;
-    left: 22%;
+    left: 240px;
     text-align: justify;
 }
 
@@ -44,7 +44,7 @@ a {
 }
 
 div#nome {
-    height: 350px;
+    height: 300px;
     position: relative;
 }
 
