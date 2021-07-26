@@ -55,3 +55,12 @@ div#nome {
 ul li:nth-child(odd) {
     background-color: rgb(170, 204, 255);
 }
+
+#indice ul li {
+    display: inline-block;
+}
+
+#indice ul li:hover {
+    background-color: black;
+    color: whitesmoke;
+}
