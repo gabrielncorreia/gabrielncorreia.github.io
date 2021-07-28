@@ -1,6 +1,18 @@
 body {
     background-color: rgb(253, 251, 251);
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    text-align: justify;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(0, 97, 223);
 }
 
 header#cabecalho {
@@ -8,8 +20,13 @@ header#cabecalho {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: silver;
+    background-color: rgb(226, 226, 226);
     border-bottom: 2px solid black;
+}
+
+#titulo {
+    padding-left: 10px;
+    color: rgb(0, 97, 223);
 }
 
 header#cabecalho li {
@@ -18,20 +35,42 @@ header#cabecalho li {
 }
 
 img#minha_foto {
-    margin-top: 130px;
+    margin-top: 140px;
+    border-radius: 20%;
 }
 
+.lado-direito {
+    float: right;
+    max-width: 600px;
+    max-height: 200px;
+    border: 2px solid black;
+    padding: 10px;
+}
 
+.lado-esquerdo {
+    float: left;
+    max-width: 600px;
+    max-height: 200px;
+    border: 2px solid black;
+    padding: 10px;
+}
 
+#tabela {
+    padding: 1em;
+    margin-top: 10px;
+    border-collapse: collapse;
+    width: 200px;
 
+}
 
+tbody tr:nth-of-type(odd) {
+    background-color: rgb(226, 226, 226);
+}
 
-
-
-
-
-
-
+#titulo-tabela {
+    margin-top: 300px;
+    font-size: 1.5em;
+}
 
 footer#rodape {
     border-top: black 2px solid;
@@ -39,6 +78,10 @@ footer#rodape {
 }
 
 footer#rodape li {
-    padding: 50px;
+    padding: 30px;
     display: inline-block;
+}
+
+footer h2 {
+    margin-top: 50px;
 }
