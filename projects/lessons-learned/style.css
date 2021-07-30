@@ -73,15 +73,21 @@ tbody tr:nth-of-type(odd) {
 }
 
 footer#rodape {
-    border-top: black 2px solid;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 footer#rodape li {
-    padding: 30px;
+    padding: 20px 0px 50px 50px;
     display: inline-block;
 }
 
 footer h2 {
-    margin-top: 50px;
+    margin: 30px 0px 20px 20px;
+}
+
+#div-rodade {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    border-top: black 2px solid;;
 }
