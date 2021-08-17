@@ -1,6 +1,6 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-top: 100px;
+    margin: 10px;
     /* background-color: #1a1a1d;
     color: white; */
     scroll-behavior: smooth;  
@@ -9,6 +9,19 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    height: 12vh;
+    width: 100vw;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 nav {
@@ -23,18 +36,15 @@ nav {
     background-color: whitesmoke;
 }
 
-#indice {
+#menu {
     margin-top: 0px;
     text-align: center;
     border-bottom: 1px solid black;
 }
 
-#indice li {
-   margin-right: 50px; 
-}
-
-hr {
-    margin-bottom: 20px;
+#menu li {
+   margin-right: 50px;
+   display: inline;
 }
 
 #foto {
@@ -47,8 +57,10 @@ hr {
 
 #descricao {
     position: flex;
-    margin-top: 70px;    
+    margin-top: 70px;
+    margin-right: 50px;    
     text-align: justify;
+    white-space: 100px;
 }
 
 .pag {
@@ -78,7 +90,7 @@ div#nome {
 } */
 
 #indice ul li {
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 #indice ul li:hover {
