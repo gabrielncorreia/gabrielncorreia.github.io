@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="indice">
-        <h2>Portifólio</h2>
-        <ul>
-            <li><a href="#">Home</a></li>
-        </ul>
-    </div>
-
-    <hr>
+    <header>
+        <nav id="indice">
+            <h2>Portifólio</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div id="nome">
     <h2 id="nome-completo">Gabriel do Nascimento Correia</h2>
@@ -23,29 +23,50 @@
     <img src="perfil.jpeg" alt="" width="200" id="foto">
 
         <div id="descricao">
-            <h3>Breve descrição</h3>
+            <h3>Sobre mim</h3>
                 <p>Meu nome é Gabriel, sou de Ribeirão Preto, e sou estudante de Desenvolvimento de Software Web na Trybe e graduado em Ciências Econômicas pelo Moura Lacerda. O meu trabalho de conclusão de curso em ciências econômicas, sobre Bitcoin e Blockchain, foi o que me levou a me apaixonar por programação e entender a importância dessa habilidade para o futuro.</p>
         </div>
     </div>
 
 
-    <h3 id="hab">Habilidades</h3>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Git</li>
-        <li>Linux</li>
-        <li>Python</li>
-    </ul>
+    <section id='skills-div'>
+        <div id="hard-skills">
+            <h3>Hard Skills</h3>
+            <ul class='skills'>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Git & Github</li>
+                <li>Unix/Linux && Bash</li>
+                <li>Python</li>
+            </ul>
+        </div>
+        <div id="soft-skills">
+            <h3>Soft Skills</h3>
+            <ul class='skills'>
+                <li>Resiliência</li>
+                <li>Team Work</li>
+                <li>Empatia</li>
+                <li>Raciocino Lógico e Analítico</li>
+                <li>Autorregulação</li>
+                <li>Autoconhecimento</li>
+            </ul>
+        </div>
+    </section>
 
 
     <!-- <h3>Blog que gosto</h3>
     <p><a href="#">Não me vem nenhum a mente.</a></p> -->
-    <br>
-    <p><a href="projects/lessons-learned/index.html" class="pag">Ir para a página do Primeiro Projeto</a></p>
-    <br>
-    <p><a href="projects/pixels-art/index.html" class="pag">Ir para a página do Projeto Pixels Art</a></p>
-    <br>
+    <section id="projects">
+        <br>
+        <p><a href="projects/lessons-learned/index.html" class="pag">Ir para a página do Primeiro Projeto</a></p>
+        <br>
+        <p><a href="projects/pixels-art/index.html" class="pag">Ir para a página do Projeto Pixels Art</a></p>
+        <br>
+    </section>
+
+    <footer>
+        <h3>Created by Gabriel N Correia</h3>
+    </footer>
 </body>
 </html>

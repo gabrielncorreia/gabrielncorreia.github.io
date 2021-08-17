@@ -1,7 +1,6 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 2%;
-    padding-top: 0;
+    margin-top: 100px;
     /* background-color: #1a1a1d;
     color: white; */
     scroll-behavior: smooth;  
@@ -12,9 +11,22 @@ a {
     color: inherit;
 }
 
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: whitesmoke;
+}
+
 #indice {
     margin-top: 0px;
     text-align: center;
+    border-bottom: 1px solid black;
 }
 
 #indice li {
@@ -72,4 +84,54 @@ div#nome {
 #indice ul li:hover {
     background-color: black;
     color: whitesmoke;
+}
+
+#skills-div {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+#hard-skills h3 {
+    text-align: center;
+    padding: 10px 15px;
+    margin-left: 35px;
+}
+
+#soft-skills h3 {
+    text-align: center;
+    padding: 10px 15px;
+    margin-left: 35px;
+}
+
+#hard-skills {
+    margin-left: 100px;
+}
+
+#soft-skills {
+    margin-right: 100px;
+}
+
+.skills {
+    list-style-type: none;
+}
+
+#projects {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-around;
+}
+
+#projects p {
+    padding-right: 10px;
+}
+
+footer {
+    margin-top: 500px;
+    border-top: 1px solid;
+    text-align: center;
 }
