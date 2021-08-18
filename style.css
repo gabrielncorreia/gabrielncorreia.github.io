@@ -1,8 +1,8 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 10px;
-    background-color:#fffffe;
-    color: #1d1d1d;
+    background-color:#1B1B19;
+    color: #F2F3F4;
     scroll-behavior: smooth;  
 }
 
@@ -20,7 +20,10 @@ ul {
 header {
     height: 10vh;
     width: 100vw;
-    color: #094067;
+}
+
+header a:hover {
+    color: #B3BDD4;
 }
 
 * {
@@ -42,7 +45,9 @@ nav {
 #menu {
     margin-top: 0px;
     text-align: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #253354;
+    background-color: #253354;
+    color: #F2F3F4;
 }
 
 #menu li {
@@ -54,7 +59,7 @@ nav {
     border-radius: 10%;
     float: left;
     padding: 5px;
-    background-color: black;
+    background-color: #B3BDD4;
     margin-right: 30px;
     margin-top: 20px;
     width: 200px;
@@ -68,16 +73,20 @@ nav {
     text-align: justify;
 }
 
+#descricao h3 {
+    color: #B3BDD4;
+}
+
 .pag {
-    background-color: rgb(43, 94, 206);
-    color: whitesmoke;
+    background-color: #365194;
+    color: #F2F3F4;
     padding: 15px;
     border-radius: 10px;
     font-weight: 700;
 }
 
 .pag:hover {
-    background-color: black;
+    background-color: #253354;
 }
 
 div#nome {
@@ -88,6 +97,8 @@ div#nome {
 #nome-completo {
     text-align: center;
     margin-bottom: 50px;
+    margin-top: 0px;
+    color: #B3BDD4;
 }
 
 /* ul li:nth-child(odd) {
@@ -108,8 +119,8 @@ div#nome {
     justify-content: space-around;
     padding-top: 50px;
     padding-bottom: 50px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid #B3BDD4;
+    border-bottom: 1px solid #B3BDD4;
     text-align: center;
 }
 
@@ -117,12 +128,14 @@ div#nome {
     text-align: center;
     padding: 10px 15px;
     margin-left: 35px;
+    color: #B3BDD4;
 }
 
 #soft-skills h3 {
     text-align: center;
     padding: 10px 15px;
     margin-left: 35px;
+    color: #B3BDD4;
 }
 
 #hard-skills {
