@@ -1,0 +1,186 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 10px;
+    background-color:#1B1B19;
+    color: #F2F3F4;
+    scroll-behavior: smooth;  
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+header {
+    height: 10vh;
+    width: 100vw;
+}
+
+header a:hover {
+    color: #B3BDD4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: whitesmoke;
+}
+
+#menu {
+    margin-top: 0px;
+    text-align: center;
+    border-bottom: 1px solid #253354;
+    background-color: #253354;
+    color: #F2F3F4;
+}
+
+#menu li {
+   margin-right: 50px;
+   display: inline;
+}
+
+#foto {
+    border-radius: 10%;    
+    padding: 5px;
+    background-color: #B3BDD4;
+    /* margin-right: 30px;
+    margin-top: 20px;
+    width: 200px;
+    height: 200px; */
+}
+
+#container-decricao {
+	position: flex;
+	margin-top: 110px;
+	margin-bottom: 70px;
+}
+
+#descricao {
+	width: 50%;
+	margin-left: 25%;
+	text-align: justify;
+}
+
+#descricao h3 {
+    color: #B3BDD4;
+}
+
+.pag {
+    background-color: #365194;
+    color: #F2F3F4;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.pag:hover {
+    background-color: #253354;
+}
+
+#nome {
+	display: flex;
+	justify-content: space-evenly;
+  margin-top: 100px;
+}
+
+#nome-completo {
+    text-align: center;
+    margin-bottom: 50px;
+		margin-top: 50px;
+    color: #B3BDD4;
+		font-size: 30px;
+}
+
+#nome-completo p {
+	font-size: 17px;
+	font-weight: normal;
+}
+/* ul li:nth-child(odd) {
+    background-color: rgb(170, 204, 255);
+} */
+
+#indice ul li {
+    /* display: inline-block; */
+}
+
+#indice ul li:hover {
+    background-color: black;
+    color: whitesmoke;
+}
+
+#skills-div {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-top: 1px solid #B3BDD4;
+    border-bottom: 1px solid #B3BDD4;
+    text-align: center;
+}
+
+#hard-skills h3 {
+    text-align: center;
+    padding: 10px 15px;
+    margin-left: 35px;
+    color: #B3BDD4;
+}
+
+#soft-skills h3 {
+    text-align: center;
+    padding: 10px 15px;
+    margin-left: 35px;
+    color: #B3BDD4;
+}
+
+#hard-skills {
+    margin-left: 100px;
+}
+
+#soft-skills {
+    margin-right: 100px;
+}
+
+.skills {
+    list-style-type: none;
+}
+
+#container-projects {
+	margin-top: 50px;
+	text-align: center;
+}
+
+#container-projects h3{
+	font-size: 20px;
+}
+
+#projects {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-around;
+}
+
+#projects p {
+    padding-right: 10px;
+}
+
+footer {
+    margin-top: 500px;
+    border-top: 1px solid;
+    text-align: center;
+}

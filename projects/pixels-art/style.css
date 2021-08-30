@@ -1,0 +1,24 @@
+.color {
+  display: inline-block;
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+#pixel-board {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  width: 500px;
+  height: 500px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+}
+
+button {
+  margin-bottom: 10px;
+}
