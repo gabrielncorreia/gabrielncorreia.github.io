@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Converta o texto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="header">
+    <h1>Converta o texto</h1>
+  </header>
+  
+  <section id="section-textarea">
+    <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+    <span id="counters">Caracteres: <span id="chars-count">0</span> | Palavras: <span id="words-count">0</span> | Linhas: <span>0</span></span>
+    <!-- Se o keyup for igual o código do enter ou do shift + enter então colocar + 1 na linhas -->
+    <!-- Caracteres conta a cada keyup, tanto faz o código -->
+    <!-- Cada keyup referente o espaço coloca mais 1 nas palavras -->
+
+  </section>
+<!-- E se eu colocar tudo dentro de uma grande div e inverter o sentido do display flex para coluna?? -->
+  <div id="buttons"> 
+      <button id="toSentenceCase" class="buttons-padding">Sentence case (ok)</button>
+      <button id="toLowerCase" class="buttons-padding">lower case (ok)</button>
+      <button id="toUpperCase" class="buttons-padding">UPPER CASE (ok)</button>
+      <button id="toCapitalizedCase" class="buttons-padding">Capitalized Case (ok)</button>
+      <button class="buttons-padding">aLtErNaTiNg cAsE</button>
+      <button class="buttons-padding">Title Case</button>
+      <button class="buttons-padding">InVeRsE CaSe</button>
+      <button id="copyToClipboard" class="buttons-padding">Copy to Clipboard (ok)</button>
+      <button id="clearButton" class="buttons-padding">Clear (ok)</button>
+  </div>
+
+  <footer id="footer">
+    <h5>Criado por Gabriel N. Correia</h5>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
