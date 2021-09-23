@@ -32,6 +32,7 @@
 	outline: inherit;
   font-size: 17px;
   resize: none;
+  overflow: auto;
 }
 
 #counters {
@@ -52,7 +53,6 @@ button {
 button:active {
   border: none;
   box-shadow: inset 0px 0px 10px 5px rgb(177, 177, 177);
-
 }
 
 #buttons {
@@ -64,6 +64,10 @@ button:active {
 .buttons-padding {
   padding: 7px;
   margin: 5px;
+}
+
+#lorem {
+  background-color: rgb(192, 221, 255);
 }
 
 
