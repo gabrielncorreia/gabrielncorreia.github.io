@@ -3,8 +3,11 @@ const buttonToLowerCase = document.querySelector('#toLowerCase')
 
 const buttonToUpperCase = document.querySelector('#toUpperCase')
 const buttonCapitalizedCase = document.querySelector('#toCapitalizedCase')
+const buttonLorem = document.querySelector('#lorem')
 const buttonCopyToClipboard = document.querySelector('#copyToClipboard')
 const buttonClear = document.querySelector('#clearButton');
+
+const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Velit egestas dui id ornare arcu odio ut. Tincidunt eget nullam non nisi est. In cursus turpis massa tincidunt dui ut. Cursus sit amet dictum sit amet justo donec. Turpis egestas maecenas pharetra convallis posuere. Neque viverra justo nec ultrices dui. Diam volutpat commodo sed egestas egestas fringilla phasellus. Nec dui nunc mattis enim. In metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Massa ultricies mi quis hendrerit dolor magna eget. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Nisl condimentum id venenatis a condimentum vitae sapien pellentesque. Dictum varius duis at consectetur lorem donec. Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Ut venenatis tellus in metus vulputate eu scelerisque felis.'
 
 const warning = () => {
   alert('Digite algo!')
@@ -65,6 +68,14 @@ const capitalizedCase = () => {
 }
 
 buttonCapitalizedCase.addEventListener('click', capitalizedCase)
+
+const createLorem = () => {
+  const textarea = document.querySelector('#textarea');
+
+  textarea.value = lorem
+}
+
+buttonLorem.addEventListener('click', createLorem)
 
 const copyToClipboard = () => {
   const textarea = document.querySelector('#textarea');
