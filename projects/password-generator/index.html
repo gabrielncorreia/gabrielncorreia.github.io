@@ -8,33 +8,41 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <h1>Password Generator</h1>
+  <form id="password-generator-container">
+    <div class="general-container">
 
-    <input type="text" placeholder="Aperte o Go!" id="result-input"><button id="copy-button">Copy!</button>
-
-    <section id="inputs-section">
-
-      <div>
-        <label for="length">Length: </label><input type="number" name="" id="length-input">
+      <h1>Password Generator</h1>
+      <div id="result-container">
+        <input type="text" placeholder="Let's Generate A Password" id="result-input"> <button id="copy-button">Copy!</button>
       </div>
 
-      <div>
-        <label for="">Include Uppercase </label><input type="checkbox" name="" id="uppercase-checkbox">
+      <div class="options">
+        <div class="option">
+          <label for="length">Length: </label>
+          <input type="number" name="" id="length-input" min="4" max="20" value="10">
+        </div>
+
+        <div class="option">
+          <label for="">Include Uppercase: </label>
+          <input type="checkbox" checked id="uppercase-checkbox">
+        </div>
+
+        <div class="option">
+          <label for="">Include Numbers: </label>
+          <input type="checkbox" checked id="numbers-checkbox">
+        </div>
+        
+        <div class="option">
+          <label for="">Include Symbols: </label>
+          <input type="checkbox" checked id="symbols-checkbox">
+        </div>
       </div>
 
-      <div>
-        <label for="">Include Numbers </label><input type="checkbox" name="" id="numbers-checkbox">
-      </div>
+      <button class="btn" id="generate-button" type="submit">Generate Password!</button>
 
-      <div>
-        <label for="">Include Symbols </label><input type="checkbox" name="" id="symbols-checkbox">
-      </div>
+    </div>
+  </form>
 
-      <button>Generate Password</button>
-
-    </section>
-
-  </main>
+  <script src="script.js"></script>
 </body>
 </html>
