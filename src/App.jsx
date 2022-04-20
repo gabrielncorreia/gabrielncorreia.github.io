@@ -1,11 +1,10 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './App.css';
 import mailIcon from './images/gmailicon.png';
 
 function App() {
-  // const currentDate = new Date();
-  // const currentTime = currentDate.toLocaleTimeString();
   const [clock, setClock] = useState(new Date());
 
   function refreshClock() {
@@ -29,7 +28,7 @@ function App() {
         <div id="img-textbox-div">
           <div id="img-div" />
           <div id="header-textbox-div">
-            <div id="header-div"><h4>Escreva algo legal aqui...</h4></div>
+            <div id="header-div"><h4>I use arch btw</h4></div>
             <div id="textbox-div">
               {/* <h4>text box with all the links</h4> */}
               <div id="about-me-div">
@@ -48,7 +47,7 @@ function App() {
                 <h4>Technologies I Use</h4>
                 <div id="skills-icon-div">
                   <img alt="react" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" />
-                  <img alt="gabriel-Js" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" />
+                  <img alt="js" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" />
                   <img alt="typescript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
                   <img alt="HTML" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" />
                   <img alt="CSS" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" />
@@ -65,15 +64,18 @@ function App() {
                   <img alt="vscode" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
                 </div>
               </div>
-              <div>
+              <div id="check-projects-div">
                 <h4>Check out some of my projects</h4>
-                <button type="button" id="my-projects-button">My Projects Page</button>
+                <div id="button-div">
+                  <Link to="/projects">
+                    <button type="button" id="my-projects-button">My Projects Page</button>
+                  </Link>
+                </div>
               </div>
               <div id="contact-div">
                 <h4>How to contact me</h4>
                 <div id="icons-div">
                   <a href="mailto:gncorreia@proton.me" target="_blank" rel="noreferrer">
-                    {/* refazer isso usando o Link do React */}
                     <img src={mailIcon} alt="protonmail" srcSet="" />
                   </a>
                   <a href="https://www.linkedin.com/in/gncorreia/" target="_blank" rel="noreferrer">

@@ -64,10 +64,10 @@ body {
   /* margin: 10px; */
   /* box-shadow: 1px 1px 1px 1px #7E4343; */
   width: 400px;
-  background-image: url(images/perfil-recortado2.jpeg);
-  background-size: 350px;
-  /* background-position-x: -95px; */
-  background-position: center;
+  background-image: url(images/esse4.jpg);
+  background-size: 625px;
+  background-position-x: -240px;
+  /* background-position: right; */
   background-repeat: no-repeat;
   /* filter: grayscale(100%); */
 }
@@ -148,10 +148,10 @@ body {
 }
 
 #my-projects-button:active {
-  border-bottom: 1px inset rgba(0,0,0,.5);
-  border-left: 1px inset rgba(0,0,0,.5);
-  border-right: 1px inset rgba(255, 255, 255, .5);
-  border-top: 1px inset rgba(255, 255, 255, .5);
+  border-bottom: 3px inset transparent;
+  border-left: 3px inset transparent;
+  border-right: 3px inset transparent;
+  border-top: 3px inset transparent;
 }
 
 #icons-div {
