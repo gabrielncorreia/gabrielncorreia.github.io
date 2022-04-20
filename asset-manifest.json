@@ -1,21 +1,17 @@
 {
   "files": {
-    "main.css": "//project-react-tryunfo-magic-edition/static/css/main.e9b0cf89.chunk.css",
-    "main.js": "//project-react-tryunfo-magic-edition/static/js/main.617e50fa.chunk.js",
-    "main.js.map": "//project-react-tryunfo-magic-edition/static/js/main.617e50fa.chunk.js.map",
-    "runtime-main.js": "//project-react-tryunfo-magic-edition/static/js/runtime-main.1bcf53f6.js",
-    "runtime-main.js.map": "//project-react-tryunfo-magic-edition/static/js/runtime-main.1bcf53f6.js.map",
-    "static/js/2.3be5f0a0.chunk.js": "//project-react-tryunfo-magic-edition/static/js/2.3be5f0a0.chunk.js",
-    "static/js/2.3be5f0a0.chunk.js.map": "//project-react-tryunfo-magic-edition/static/js/2.3be5f0a0.chunk.js.map",
-    "index.html": "//project-react-tryunfo-magic-edition/index.html",
-    "static/css/main.e9b0cf89.chunk.css.map": "//project-react-tryunfo-magic-edition/static/css/main.e9b0cf89.chunk.css.map",
-    "static/js/2.3be5f0a0.chunk.js.LICENSE.txt": "//project-react-tryunfo-magic-edition/static/js/2.3be5f0a0.chunk.js.LICENSE.txt",
-    "static/media/App.css": "//project-react-tryunfo-magic-edition/static/media/pngkit_magic-the-gathering-png_1458847.b288fdc5.png"
+    "main.css": "/static/css/main.db09f4f0.css",
+    "main.js": "/static/js/main.583c2214.js",
+    "static/js/787.7fe54b54.chunk.js": "/static/js/787.7fe54b54.chunk.js",
+    "static/media/1640134417606.gif": "/static/media/1640134417606.bf6daffbfc0d57632c9a.gif",
+    "static/media/perfil-recortado2.jpeg": "/static/media/perfil-recortado2.fae24f81ed3a629737b2.jpeg",
+    "index.html": "/index.html",
+    "main.db09f4f0.css.map": "/static/css/main.db09f4f0.css.map",
+    "main.583c2214.js.map": "/static/js/main.583c2214.js.map",
+    "787.7fe54b54.chunk.js.map": "/static/js/787.7fe54b54.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.1bcf53f6.js",
-    "static/js/2.3be5f0a0.chunk.js",
-    "static/css/main.e9b0cf89.chunk.css",
-    "static/js/main.617e50fa.chunk.js"
+    "static/css/main.db09f4f0.css",
+    "static/js/main.583c2214.js"
   ]
 }
