@@ -148,10 +148,11 @@ body {
 }
 
 #my-projects-button:active {
-  border-bottom: 3px inset transparent;
-  border-left: 3px inset transparent;
-  border-right: 3px inset transparent;
-  border-top: 3px inset transparent;
+  border-bottom: 1px inset rgba(0,0,0,.5);
+  border-left: 1px inset rgba(0,0,0,.5);
+  border-right: 1px inset rgba(255, 255, 255, .5);
+  border-top: 1px inset rgba(255, 255, 255, .5);
+  margin: 2px;
 }
 
 #icons-div {
@@ -175,4 +176,40 @@ body {
 
 #contact-div a {
   text-decoration: none;
+}
+
+/* Responsive CSS */
+@media only screen and (max-width:31.25em) { 
+	#img-div {
+    display: none;
+  }
+
+  #textbox-div {
+    height: 95.2%;
+  }
+
+  #main-div {
+    /* border: 5px solid red; */
+    width: 450px;
+    height: 70%;
+  }
+
+  #skills-icon-div {
+    /* border: 1px solid green; */
+    flex-wrap: wrap;
+    /* margin: 5px; */
+    /* margin-bottom: 10px; */
+    /* padding-bottom: 10px; */
+  }
+
+  #skills-icon-div img {
+    /* margin: 5px; */
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  #contact-div {
+    /* border: 1px solid red; */
+    padding-top: 5px;
+  }
 }
