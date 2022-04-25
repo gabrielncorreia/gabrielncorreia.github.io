@@ -179,10 +179,10 @@ body {
 }
 
 /* Responsive CSS for smartphones */
-@media only screen and (max-width:31.25em) {
+@media only screen and (max-width: 850px) {
   body {
     background-size: auto;
-    color: aqua;
+    /* color: aqua; */
   }
 
   #main-div {
@@ -210,11 +210,7 @@ body {
   }
 
   #skills-icon-div {
-    /* border: 1px solid green; */
     flex-wrap: wrap;
-    /* margin: 5px; */
-    /* margin-bottom: 10px; */
-    /* padding-bottom: 10px; */
   }
 
   #skills-icon-div img {
@@ -236,24 +232,31 @@ body {
 }
 
 /* Responsive CSS for HD displays */
-/* @media only screen and (max-width:85.375em) { 
+@media only screen and (max-width:1600px) { 
   #main-div {
-    height: 450px;
+    height: fit-content;
     width: 850px;
   }
 
   #img-div {
     width: 350px;
-    background-image: url(images/esse4.jpg);
-    background-size: 560px;
-    background-position-x: -230px;
-    /* background-position: right; */
-    /* background-repeat: no-repeat; */
-    /* filter: grayscale(100%); */
-  /* } */
+    background-size: 575px;
+    background-position-x: -235px;
+  }
 
-  /* #textbox-div {
-    height: 93.5%;
-    font-size: 13px;
-  } */
-/* } */
+  #skills-icon-div {
+    margin-bottom: 25px;
+  }
+
+  #textbox-div {
+    border: none;
+    box-shadow: none;
+    font-size: 13.5px;
+  }
+
+  #contact-div {
+    /* border: 1px solid red; */
+    padding-top: 5px;
+    margin-bottom: 15px;
+  }
+}
