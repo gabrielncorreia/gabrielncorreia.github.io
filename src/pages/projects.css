@@ -53,3 +53,21 @@
   align-items: center;
   margin-right: 20px;
 }
+
+#gifs-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#gifs-div img {
+  width: 100px;
+}
+
+#gifs-div h4 {
+  margin-top: 5px;
+}
+
+#gifs-div hr {
+  width: 500px;
+}
