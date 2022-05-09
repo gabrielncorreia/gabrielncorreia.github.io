@@ -240,8 +240,9 @@ body {
 
   #img-div {
     width: 350px;
-    background-size: 575px;
-    background-position-x: -235px;
+    background-size: 600px;
+    background-position-x: -250px;
+    /* background-position-y: 10px; */
   }
 
   #skills-icon-div {
