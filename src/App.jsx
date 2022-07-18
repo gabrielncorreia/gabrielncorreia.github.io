@@ -17,7 +17,7 @@ function App() {
       clearInterval(timerId);
     };
   }, []);
-  // console.log(currentDate);
+
   return (
     <main className="App">
       <div id="main-div">
@@ -30,7 +30,6 @@ function App() {
           <div id="header-textbox-div">
             <div id="header-div"><h4>I use arch btw</h4></div>
             <div id="textbox-div">
-              {/* <h4>text box with all the links</h4> */}
               <div id="about-me-div">
                 <h4>About Me</h4>
                 <p>
