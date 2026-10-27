@@ -36,9 +36,9 @@
       "trivia": "Projeto em grupo: jogo de perguntas com timer, placar e ranking de jogadores, usando uma API externa de trivia.",
       "starwars-planets": "Tabela de planetas de Star Wars com filtros combináveis e ordenação, com estado gerenciado via Context API.",
       "trybewallet": "Carteira de despesas com conversão de moedas em tempo real a partir de uma API de câmbio.",
-      "frontend-online-store": "Projeto em grupo: loja virtual com busca por categoria, carrinho e avaliações de produtos, usando a API do Mercado Livre.",
+      "frontend-online-store": "Projeto em grupo: loja virtual com produtos reais do Mercado Livre e preços em reais, categorias, busca, avaliações e carrinho. Os dados passam por um Cloudflare Worker que escrevi para manter o token da API fora do navegador.",
       "trybetunes": "Busca de álbuns e músicas com prévia de áudio e lista de favoritas.",
-      "shopping-cart": "Carrinho de compras em JavaScript puro usando a API do Mercado Livre."
+      "shopping-cart": "Loja de página única em JavaScript puro com produtos reais do Mercado Livre e um carrinho em forma de cupom fiscal, servida pelo mesmo Cloudflare Worker."
     },
     "viewCode": "Ver código",
     "liveDemo": "Ver ao vivo",

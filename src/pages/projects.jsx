@@ -27,11 +27,15 @@ const PROJECTS = [
   {
     repo: 'trybewallet', name: 'TrybeWallet', tags: ['React', 'Redux'], live: true,
   },
-  { repo: 'frontend-online-store', name: 'Front-end Online Store', tags: ['React'] },
+  {
+    repo: 'frontend-online-store', name: 'Vitrine', tags: ['React', 'Context API', 'Cloudflare Workers'], live: true,
+  },
   {
     repo: 'trybetunes', name: 'TrybeTunes', tags: ['React'], live: true,
   },
-  { repo: 'shopping-cart', name: 'Shopping Cart', tags: ['JavaScript'] },
+  {
+    repo: 'shopping-cart', name: 'Shopping Cart', tags: ['JavaScript', 'Cloudflare Workers'], live: true,
+  },
 ];
 
 // Personal work without public repos; ids are translation keys under projects.side.
