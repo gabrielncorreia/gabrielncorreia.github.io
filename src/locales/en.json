@@ -47,11 +47,11 @@
     "side": {
       "ecclesia": {
         "name": "Ecclesia",
-        "about": "An interactive web timeline of Catholic and Christian history, rendered on canvas with WebGL, in Portuguese and English."
+        "about": "An interactive timeline of 2,000 years of Catholic and Christian history: over 6,700 events drawn on a WebGL canvas, with zoom, search, keyboard navigation, an accessible list view and shareable links. A TypeScript pipeline builds the dataset from Wikidata and Wikipedia."
       },
       "crivo": {
         "name": "Crivo",
-        "about": "Uses an LLM to flag unsourced claims and logical fallacies in Brazilian news, delivered as a newsletter and as a browser extension for Firefox and Chromium."
+        "about": "A Firefox and Chromium extension that uses an LLM to flag unsourced claims and logical fallacies in Brazilian news, highlighting the sentences right on the page. Backed by a Cloudflare Worker API with result caching and daily limits."
       },
       "instagram": {
         "name": "Instagram extension",
@@ -125,8 +125,8 @@
         "role": "",
         "summary": "Products I design and build end to end on my own time.",
         "bullets": [
-          "Ecclesia: a WebGL timeline rendered with PixiJS v8 on React, Vite and TypeScript, in two languages",
-          "Crivo: uses an LLM to flag unsourced claims and logical fallacies in Brazilian news, as a newsletter and a Firefox and Chromium extension",
+          "Ecclesia: a timeline of over 6,700 events rendered with PixiJS v8 (WebGL) on React and TypeScript, with a data pipeline built on Wikidata and Wikipedia",
+          "Crivo: a Firefox and Chromium extension that flags unsourced claims and logical fallacies in Brazilian news with an LLM, backed by a Cloudflare Worker API",
           "Published a browser extension on the Firefox Add-ons store"
         ]
       }

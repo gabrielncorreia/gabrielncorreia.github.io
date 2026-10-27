@@ -20,7 +20,7 @@ const WORK = [
     tags: ['Terraform', 'AWS CDK', 'EKS', 'Helm', 'Docker', 'Lambda', 'VPC', 'Step Functions', 'Azure'],
     featured: true,
   },
-  { id: 'independent', tags: ['PixiJS v8', 'WebGL', 'LLM', 'WebExtensions', 'Firefox Add-ons'] },
+  { id: 'independent', tags: ['PixiJS v8', 'WebGL', 'LLM', 'WebExtensions', 'Cloudflare Workers', 'Firefox Add-ons'] },
 ];
 
 export default function Experience() {

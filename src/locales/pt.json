@@ -47,11 +47,11 @@
     "side": {
       "ecclesia": {
         "name": "Ecclesia",
-        "about": "Linha do tempo interativa da história católica e cristã, renderizada em canvas com WebGL, em português e inglês."
+        "about": "Linha do tempo interativa de 2.000 anos de história católica e cristã: mais de 6.700 eventos desenhados em canvas WebGL, com zoom, busca, navegação por teclado, uma lista acessível e links compartilháveis. Um pipeline em TypeScript monta os dados a partir da Wikidata e da Wikipédia."
       },
       "crivo": {
         "name": "Crivo",
-        "about": "Usa um LLM para apontar afirmações sem fonte e falácias lógicas em notícias brasileiras, entregue como newsletter e como extensão para Firefox e Chromium."
+        "about": "Extensão para Firefox e Chromium que usa um LLM para apontar afirmações sem fonte e falácias lógicas em notícias brasileiras, destacando as frases na própria página. Com uma API em Cloudflare Worker, cache de resultados e limites diários."
       },
       "instagram": {
         "name": "Extensão para Instagram",
@@ -125,8 +125,8 @@
         "role": "",
         "summary": "Produtos que projeto e construo de ponta a ponta no meu tempo livre.",
         "bullets": [
-          "Ecclesia: linha do tempo em WebGL renderizada com PixiJS v8 sobre React, Vite e TypeScript, em dois idiomas",
-          "Crivo: usa um LLM para apontar afirmações sem fonte e falácias lógicas em notícias brasileiras, como newsletter e extensão para Firefox e Chromium",
+          "Ecclesia: linha do tempo com mais de 6.700 eventos renderizada com PixiJS v8 (WebGL) sobre React e TypeScript, com pipeline de dados a partir da Wikidata e da Wikipédia",
+          "Crivo: extensão para Firefox e Chromium que aponta afirmações sem fonte e falácias lógicas em notícias brasileiras com um LLM, com uma API em Cloudflare Worker",
           "Publiquei uma extensão de navegador na loja de complementos do Firefox"
         ]
       }
