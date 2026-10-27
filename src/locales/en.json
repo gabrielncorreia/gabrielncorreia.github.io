@@ -29,7 +29,7 @@
   "projects": {
     "title": "projects.md",
     "heading": "My projects",
-    "intro": "Bootcamp projects with live demos and code, plus what I build on my own time. Everything public is on <github>GitHub</github>.",
+    "intro": "What I build on my own time, plus the projects I made while learning to program at the Trybe bootcamp. Everything public is on <github>GitHub</github>.",
     "items": {
       "TFC": "Football matches and standings API with JWT login, built in TypeScript with Express and Sequelize on MySQL. Runs in Docker and is covered by integration tests.",
       "recipe-app": "Group project: a food and drink recipes app with search, favorites and step-by-step cooking progress.",
@@ -42,7 +42,7 @@
     },
     "viewCode": "View code",
     "liveDemo": "Live demo",
-    "trybeHeading": "Trybe projects",
+    "trybeHeading": "Trybe projects, built while I was learning to program",
     "sideHeading": "Side projects",
     "side": {
       "ecclesia": {

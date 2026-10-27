@@ -40,7 +40,11 @@ const PROJECTS = [
 
 // Personal work without public repos; ids are translation keys under projects.side.
 const SIDE_PROJECTS = [
-  { id: 'ecclesia', tags: ['PixiJS v8', 'React', 'TypeScript', 'Vite', 'Wikidata'] },
+  {
+    id: 'ecclesia',
+    tags: ['PixiJS v8', 'React', 'TypeScript', 'Vite', 'Wikidata'],
+    live: 'https://ecclesia-7o1.pages.dev/',
+  },
   { id: 'crivo', tags: ['TypeScript', 'LLM', 'WebExtensions', 'Cloudflare Workers'] },
   {
     id: 'instagram',
@@ -68,6 +72,25 @@ export default function Projects() {
           </p>
         </Tile>
 
+        <h2 className="section-heading">{t('projects.sideHeading')}</h2>
+        {SIDE_PROJECTS.map(({
+          id, tags, live, store,
+        }) => (
+          <Tile key={id} title={id} className="tile-project">
+            <h2>{t(`projects.side.${id}.name`)}</h2>
+            <p>{t(`projects.side.${id}.about`)}</p>
+            <ul className="tags">
+              {tags.map((tag) => <li key={tag}>{tag}</li>)}
+            </ul>
+            {(live || store) && (
+              <div className="project-links">
+                {live && <a href={live} target="_blank" rel="noreferrer">{t('projects.liveDemo')}</a>}
+                {store && <a href={store} target="_blank" rel="noreferrer">{t('projects.firefoxStore')}</a>}
+              </div>
+            )}
+          </Tile>
+        ))}
+
         <h2 className="section-heading">{t('projects.trybeHeading')}</h2>
         {PROJECTS.map(({
           repo, name, tags, featured, live,
@@ -92,22 +115,6 @@ export default function Projects() {
                 {t('projects.viewCode')}
               </a>
             </div>
-          </Tile>
-        ))}
-
-        <h2 className="section-heading">{t('projects.sideHeading')}</h2>
-        {SIDE_PROJECTS.map(({ id, tags, store }) => (
-          <Tile key={id} title={id} className="tile-project">
-            <h2>{t(`projects.side.${id}.name`)}</h2>
-            <p>{t(`projects.side.${id}.about`)}</p>
-            <ul className="tags">
-              {tags.map((tag) => <li key={tag}>{tag}</li>)}
-            </ul>
-            {store && (
-              <div className="project-links">
-                <a href={store} target="_blank" rel="noreferrer">{t('projects.firefoxStore')}</a>
-              </div>
-            )}
           </Tile>
         ))}
       </main>
