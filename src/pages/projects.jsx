@@ -21,7 +21,9 @@ const PROJECTS = [
   {
     repo: 'trivia', name: 'Trivia', tags: ['React', 'Redux'], live: true,
   },
-  { repo: 'starwars-planets', name: 'Star Wars Planets', tags: ['React', 'Hooks', 'Context API'] },
+  {
+    repo: 'starwars-planets', name: 'Star Wars Planets', tags: ['React', 'Hooks', 'Context API'], live: true,
+  },
   {
     repo: 'trybewallet', name: 'TrybeWallet', tags: ['React', 'Redux'], live: true,
   },
