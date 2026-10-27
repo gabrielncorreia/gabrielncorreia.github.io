@@ -54,10 +54,11 @@
         "about": "A Firefox and Chromium extension that uses an LLM to flag unsourced claims and logical fallacies in Brazilian news, highlighting the sentences right on the page. Backed by a Cloudflare Worker API with result caching and daily limits."
       },
       "instagram": {
-        "name": "Instagram extension",
-        "about": "A Firefox extension that hides chosen page elements on Instagram web, published on the Firefox Add-ons store."
+        "name": "Hide Instagram Elements",
+        "about": "A Firefox and Chrome extension that hides chosen parts of Instagram web, such as the feed, stories and suggestions, from a popup of toggles. Built with injected CSS so it survives Instagram re-rendering, and published on the Firefox Add-ons store."
       }
-    }
+    },
+    "firefoxStore": "Firefox Add-ons"
   },
   "experience": {
     "title": "experience.md",
@@ -127,7 +128,7 @@
         "bullets": [
           "Ecclesia: a timeline of over 6,700 events rendered with PixiJS v8 (WebGL) on React and TypeScript, with a data pipeline built on Wikidata and Wikipedia",
           "Crivo: a Firefox and Chromium extension that flags unsourced claims and logical fallacies in Brazilian news with an LLM, backed by a Cloudflare Worker API",
-          "Published a browser extension on the Firefox Add-ons store"
+          "Hide Instagram Elements: published on the Firefox Add-ons store, built in TypeScript with Preact and Vite for Firefox and Chrome"
         ]
       }
     }

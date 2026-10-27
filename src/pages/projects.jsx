@@ -34,11 +34,15 @@ const PROJECTS = [
   { repo: 'shopping-cart', name: 'Shopping Cart', tags: ['JavaScript'] },
 ];
 
-// Personal work without public repos yet; ids are translation keys under projects.side.
+// Personal work without public repos; ids are translation keys under projects.side.
 const SIDE_PROJECTS = [
   { id: 'ecclesia', tags: ['PixiJS v8', 'React', 'TypeScript', 'Vite', 'Wikidata'] },
   { id: 'crivo', tags: ['TypeScript', 'LLM', 'WebExtensions', 'Cloudflare Workers'] },
-  { id: 'instagram', tags: ['WebExtensions', 'Firefox Add-ons'] },
+  {
+    id: 'instagram',
+    tags: ['TypeScript', 'Preact', 'Vite', 'WebExtensions'],
+    store: 'https://addons.mozilla.org/firefox/addon/hide-instagram-elements/',
+  },
 ];
 
 export default function Projects() {
@@ -88,13 +92,18 @@ export default function Projects() {
         ))}
 
         <h2 className="section-heading">{t('projects.sideHeading')}</h2>
-        {SIDE_PROJECTS.map(({ id, tags }) => (
+        {SIDE_PROJECTS.map(({ id, tags, store }) => (
           <Tile key={id} title={id} className="tile-project">
             <h2>{t(`projects.side.${id}.name`)}</h2>
             <p>{t(`projects.side.${id}.about`)}</p>
             <ul className="tags">
               {tags.map((tag) => <li key={tag}>{tag}</li>)}
             </ul>
+            {store && (
+              <div className="project-links">
+                <a href={store} target="_blank" rel="noreferrer">{t('projects.firefoxStore')}</a>
+              </div>
+            )}
           </Tile>
         ))}
       </main>

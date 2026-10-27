@@ -54,10 +54,11 @@
         "about": "Extensão para Firefox e Chromium que usa um LLM para apontar afirmações sem fonte e falácias lógicas em notícias brasileiras, destacando as frases na própria página. Com uma API em Cloudflare Worker, cache de resultados e limites diários."
       },
       "instagram": {
-        "name": "Extensão para Instagram",
-        "about": "Extensão para Firefox que esconde elementos escolhidos no Instagram web, publicada na loja de complementos do Firefox."
+        "name": "Hide Instagram Elements",
+        "about": "Extensão para Firefox e Chrome que esconde partes escolhidas do Instagram web, como o feed, os stories e as sugestões, a partir de um popup com chaves. Usa CSS injetado, que resiste às re-renderizações do Instagram, e está publicada na loja de complementos do Firefox."
       }
-    }
+    },
+    "firefoxStore": "Ver na loja do Firefox"
   },
   "experience": {
     "title": "experiencia.md",
@@ -127,7 +128,7 @@
         "bullets": [
           "Ecclesia: linha do tempo com mais de 6.700 eventos renderizada com PixiJS v8 (WebGL) sobre React e TypeScript, com pipeline de dados a partir da Wikidata e da Wikipédia",
           "Crivo: extensão para Firefox e Chromium que aponta afirmações sem fonte e falácias lógicas em notícias brasileiras com um LLM, com uma API em Cloudflare Worker",
-          "Publiquei uma extensão de navegador na loja de complementos do Firefox"
+          "Hide Instagram Elements: publicada na loja de complementos do Firefox, feita em TypeScript com Preact e Vite para Firefox e Chrome"
         ]
       }
     }
