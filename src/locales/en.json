@@ -1,0 +1,135 @@
+{
+  "bar": {
+    "pages": "Pages",
+    "home": "home",
+    "projects": "projects",
+    "language": "Language",
+    "experience": "experience"
+  },
+  "home": {
+    "portraitTitle": "portrait.png",
+    "portraitAlt": "Pixel art portrait of Gabriel",
+    "aboutTitle": "about.txt",
+    "role": "Full-stack software engineer",
+    "bio": "I'm a full-stack software engineer with over four years of experience building and running web platforms in production: React and Next.js on the front end, Node.js, GraphQL and C# on the back end, and AWS infrastructure with Terraform and Kubernetes. I led development on a civic engagement platform used by UK local councils, working with teams in the UK, Canada and Israel. I came to programming from Economics, through a thesis on Bitcoin, and graduated in software development from Trybe.",
+    "cta": "See my projects",
+    "stackTitle": "stack",
+    "contactTitle": "contact",
+    "ctaExperience": "See my experience",
+    "stackGroups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "data": "Databases",
+      "cloud": "Cloud",
+      "devops": "Infra & DevOps",
+      "mobile": "Mobile"
+    },
+    "certsTitle": "certifications"
+  },
+  "projects": {
+    "title": "projects.md",
+    "heading": "My projects",
+    "intro": "Bootcamp projects with live demos and code, plus what I build on my own time. Everything public is on <github>GitHub</github>.",
+    "items": {
+      "TFC": "Football matches and standings API with JWT login, built in TypeScript with Express and Sequelize on MySQL. Runs in Docker and is covered by integration tests.",
+      "recipe-app": "Group project: a food and drink recipes app with search, favorites and step-by-step cooking progress.",
+      "trivia": "Group project: a quiz game with a timer, score and player ranking, using an external trivia API.",
+      "starwars-planets": "Star Wars planets table with combinable filters and sorting, with state managed through Context API.",
+      "trybewallet": "Expense wallet with live currency conversion from an exchange-rate API.",
+      "frontend-online-store": "Group project: an online store with category search, cart and product reviews, using the Mercado Livre API.",
+      "trybetunes": "Album and song search with audio previews and a favorites list.",
+      "shopping-cart": "Shopping cart in plain JavaScript using the Mercado Livre API."
+    },
+    "viewCode": "View code",
+    "liveDemo": "Live demo",
+    "trybeHeading": "Trybe projects",
+    "sideHeading": "Side projects",
+    "side": {
+      "ecclesia": {
+        "name": "Ecclesia",
+        "about": "An interactive web timeline of Catholic and Christian history, rendered on canvas with WebGL, in Portuguese and English."
+      },
+      "crivo": {
+        "name": "Crivo",
+        "about": "Uses an LLM to flag unsourced claims and logical fallacies in Brazilian news, delivered as a newsletter and as a browser extension for Firefox and Chromium."
+      },
+      "instagram": {
+        "name": "Instagram extension",
+        "about": "A Firefox extension that hides chosen page elements on Instagram web, published on the Firefox Add-ons store."
+      }
+    }
+  },
+  "experience": {
+    "title": "experience.md",
+    "heading": "Experience",
+    "intro": "Over four years as a full-stack software engineer, from product features to production support and cloud infrastructure.",
+    "strengthsLabel": "What I do best",
+    "strengths": [
+      "Full-stack web applications",
+      "Backend and API integrations",
+      "Databases",
+      "AWS infrastructure",
+      "Docker and Kubernetes",
+      "Infrastructure as Code",
+      "Production troubleshooting",
+      "Legacy modernization and migrations",
+      "Technical ownership and leadership"
+    ],
+    "items": {
+      "civic": {
+        "file": "civic-platform.log",
+        "title": "Civic engagement platform",
+        "period": "June 2023 to June 2026",
+        "role": "Full-stack engineer, lead developer for about two years",
+        "summary": "A platform UK local councils use to run public consultations and collect community feedback.",
+        "bullets": [
+          "Full-stack features, integrations, bug fixes and production support",
+          "Scheduled jobs, analytics and data pipelines",
+          "Daily work on AWS EKS: Kubernetes deployments with Helm and Docker",
+          "Migrated customer accounts, users and consultation contributions after an acquisition",
+          "Worked daily with teams in the UK, Canada and Israel"
+        ]
+      },
+      "migration": {
+        "file": "store-migration.log",
+        "title": "E-commerce migration platform",
+        "period": "",
+        "role": "Full-stack engineer, C# back end",
+        "summary": "A platform that migrates whole online stores between WooCommerce and Shopify, in both directions.",
+        "bullets": [
+          "Migrates everything the store APIs expose: products, categories, orders, customers, discounts, media, pages and blog posts",
+          "C# back end integrating the WooCommerce and Shopify REST APIs with API keys and OAuth",
+          "Started on AWS with DynamoDB and infrastructure in AWS CDK",
+          "Moved the whole platform to Azure later, with the data on Cosmos DB"
+        ]
+      },
+      "cloud": {
+        "file": "cloud-devops.log",
+        "title": "Cloud infrastructure and DevOps",
+        "period": "",
+        "role": "",
+        "summary": "Infrastructure work across projects, mostly on AWS and some on Azure.",
+        "bullets": [
+          "Moved AWS Lambda workloads into private VPC subnets, with Transit Gateway for private connectivity",
+          "Provisioned infrastructure as code with Terraform and AWS CDK",
+          "Ran Kubernetes workloads on EKS, deployed with Helm and Docker",
+          "Built on Lambda, API Gateway, SQS, SNS, Step Functions, S3, SES, DynamoDB, Route 53, ACM and CloudWatch",
+          "Moved a platform from AWS to Azure, including its data from DynamoDB to Cosmos DB",
+          "Deployment pipelines and infrastructure automation"
+        ]
+      },
+      "independent": {
+        "file": "independent.log",
+        "title": "Independent projects",
+        "period": "",
+        "role": "",
+        "summary": "Products I design and build end to end on my own time.",
+        "bullets": [
+          "Ecclesia: a WebGL timeline rendered with PixiJS v8 on React, Vite and TypeScript, in two languages",
+          "Crivo: uses an LLM to flag unsourced claims and logical fallacies in Brazilian news, as a newsletter and a Firefox and Chromium extension",
+          "Published a browser extension on the Firefox Add-ons store"
+        ]
+      }
+    }
+  }
+}

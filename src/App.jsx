@@ -1,96 +1,157 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './App.css';
-import mailIcon from './images/gmailicon.png';
+import Bar from './components/Bar';
+import Tile from './components/Tile';
+import PixelPortrait from './components/PixelPortrait';
+import awsIcon from './images/aws.svg';
+import helmIcon from './images/helm.svg';
+import pixiIcon from './images/pixijs.svg';
+import localstackIcon from './images/localstack.png';
+
+const DEVICON = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons';
+const icon = (path) => `${DEVICON}/${path}.svg`;
+
+// iconClass: devicon font icons, for logos that are black and need the text color.
+const STACK = [
+  {
+    group: 'frontend',
+    items: [
+      { name: 'React', icon: icon('react/react-original') },
+      { name: 'Next.js', iconClass: 'devicon-nextjs-plain' },
+      { name: 'TypeScript', icon: icon('typescript/typescript-original') },
+      { name: 'JavaScript', icon: icon('javascript/javascript-plain') },
+      { name: 'Vite', icon: icon('vitejs/vitejs-original') },
+      { name: 'PixiJS', icon: pixiIcon },
+    ],
+  },
+  {
+    group: 'backend',
+    items: [
+      { name: 'Node.js', icon: icon('nodejs/nodejs-original') },
+      { name: 'Express', iconClass: 'devicon-express-original' },
+      { name: 'GraphQL', icon: icon('graphql/graphql-plain') },
+      { name: 'C# / .NET', icon: icon('csharp/csharp-original') },
+    ],
+  },
+  {
+    group: 'data',
+    items: [
+      { name: 'MongoDB', icon: icon('mongodb/mongodb-original') },
+      { name: 'PostgreSQL / PostGIS', icon: icon('postgresql/postgresql-original') },
+      { name: 'DynamoDB', icon: icon('dynamodb/dynamodb-original') },
+    ],
+  },
+  {
+    group: 'cloud',
+    items: [
+      // Local copy with white lettering; devicon's dark wordmark vanishes on the panel.
+      { name: 'AWS', icon: awsIcon },
+      { name: 'Azure', icon: icon('azure/azure-original') },
+    ],
+  },
+  {
+    group: 'devops',
+    items: [
+      { name: 'Terraform', icon: icon('terraform/terraform-original') },
+      // CDK has no logo of its own; AWS docs brand it with the AWS mark.
+      { name: 'AWS CDK', icon: awsIcon },
+      { name: 'Docker', icon: icon('docker/docker-original') },
+      { name: 'Kubernetes', icon: icon('kubernetes/kubernetes-plain') },
+      // Recolored light: the official navy disappears on the panel.
+      { name: 'Helm', icon: helmIcon },
+      { name: 'LocalStack', icon: localstackIcon },
+      { name: 'Git', icon: icon('git/git-original') },
+      { name: 'Linux', icon: icon('linux/linux-original') },
+    ],
+  },
+  {
+    group: 'mobile',
+    items: [
+      { name: 'React Native', icon: icon('reactnative/reactnative-original') },
+      { name: 'Capacitor', icon: icon('capacitor/capacitor-original') },
+    ],
+  },
+];
+
+const CERTIFICATIONS = [
+  { name: 'AWS Certified Developer – Associate', code: 'DVA-C02', icon: awsIcon },
+  { name: 'Microsoft Certified: Azure Developer Associate', code: 'AZ-204', icon: icon('azure/azure-original') },
+];
+
+const CONTACTS = [
+  { label: 'email', text: 'gabrielncorreia@proton.me', href: 'mailto:gabrielncorreia@proton.me' },
+  { label: 'linkedin', text: 'in/gabrielncorreia', href: 'https://www.linkedin.com/in/gabrielncorreia/' },
+  { label: 'github', text: 'gabrielncorreia', href: 'https://github.com/gabrielncorreia' },
+];
 
 function App() {
-  const [clock, setClock] = useState(new Date());
+  const { t } = useTranslation();
 
-  function refreshClock() {
-    setClock(new Date());
-  }
-
-  useEffect(() => {
-    const timerId = setInterval(refreshClock, 1000);
-    return function cleanup() {
-      clearInterval(timerId);
-    };
-  }, []);
-  // console.log(currentDate);
   return (
-    <main className="App">
-      <div id="main-div">
-        <div id="main-header-div">
-          <h4>Gabriel N. Correia - Portfolio</h4>
-          <h4>{clock.toLocaleTimeString()}</h4>
-        </div>
-        <div id="img-textbox-div">
-          <div id="img-div" />
-          <div id="header-textbox-div">
-            <div id="header-div"><h4>I use arch btw</h4></div>
-            <div id="textbox-div">
-              {/* <h4>text box with all the links</h4> */}
-              <div id="about-me-div">
-                <h4>About Me</h4>
-                <p>
-                  Sou estudante de Desenvolvimento de Software Web na
-                  Trybe e graduado em Ciências Econômicas pelo Moura
-                  Lacerda.
-                  O meu trabalho de conclusão de curso em ciências
-                  econômicas, sobre Bitcoin e Blockchain, foi o que
-                  me levou a me apaixonar por programação e entender a
-                  importância dessa habilidade para o futuro.
-                </p>
-              </div>
-              <div id="skills-div">
-                <h4>Technologies I Use</h4>
-                <div id="skills-icon-div">
-                  <img alt="react" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" />
-                  <img alt="js" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" />
-                  <img alt="typescript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
-                  <img alt="HTML" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" />
-                  <img alt="CSS" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" />
-                  {/* <img alt="Python" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" /> */}
-                  <img alt="nodejs" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-                  <img alt="mysql" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
-                  <img alt="jest" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" />
-                  <img alt="linux" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" />
-                  <img alt="docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" />
-                  <i className="devicon-express-original" />
-                  <img alt="git" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
-                  <img alt="redux" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" />
-                  <img alt="sequelize" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg" />
-                  <img alt="vscode" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
-                </div>
-              </div>
-              <div id="check-projects-div">
-                <h4>Check out some of my projects</h4>
-                <div id="button-div">
-                  <Link to="/projects">
-                    <button type="button" id="my-projects-button">My Projects Page</button>
-                  </Link>
-                </div>
-              </div>
-              <div id="contact-div">
-                <h4>How to contact me</h4>
-                <div id="icons-div">
-                  <a href="mailto:gncorreia@proton.me" target="_blank" rel="noreferrer">
-                    <img src={mailIcon} alt="protonmail" srcSet="" />
-                  </a>
-                  <a href="https://www.linkedin.com/in/gncorreia/" target="_blank" rel="noreferrer">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="linkedin" srcSet="" />
-                  </a>
-                  <a href="https://github.com/gncorreia" target="_blank" rel="noreferrer">
-                    <i className="devicon-github-original" />
-                  </a>
-                </div>
-              </div>
-            </div>
+    <div className="desktop">
+      <Bar />
+      <main className="tiles home">
+        <Tile title={t('home.portraitTitle')} className="tile-portrait">
+          <PixelPortrait />
+        </Tile>
+
+        <Tile title={t('home.aboutTitle')} className="tile-about">
+          <h1 className="hero-name">Gabriel N. Correia</h1>
+          <p className="hero-role">{t('home.role')}</p>
+          <p className="hero-bio">{t('home.bio')}</p>
+          <div className="hero-actions">
+            <Link className="pixel-button" to="/experience">{t('home.ctaExperience')}</Link>
+            <Link className="text-link" to="/projects">{t('home.cta')}</Link>
           </div>
-        </div>
-      </div>
-    </main>
+        </Tile>
+
+        <Tile title={t('home.stackTitle')} className="tile-stack">
+          <div className="stack-groups">
+            {STACK.map(({ group, items }) => (
+              <section key={group} className="stack-group">
+                <h2>{t(`home.stackGroups.${group}`)}</h2>
+                <ul>
+                  {items.map(({ name, icon: src, iconClass }) => (
+                    <li key={name}>
+                      {src && <img src={src} alt="" width="18" height="18" />}
+                      {iconClass && <i className={iconClass} aria-hidden="true" />}
+                      {name}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
+          </div>
+        </Tile>
+
+        <Tile title={t('home.certsTitle')} className="tile-certs">
+          <ul className="cert-list">
+            {CERTIFICATIONS.map(({ name, code, icon: src }) => (
+              <li key={code}>
+                <img src={src} alt="" width="32" height="32" />
+                <div>
+                  <p>{name}</p>
+                  <p className="cert-code">{code}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </Tile>
+
+        <Tile title={t('home.contactTitle')} className="tile-contact">
+          <ul className="contact-list">
+            {CONTACTS.map(({ label, text, href }) => (
+              <li key={label}>
+                <span>{label}</span>
+                <a href={href} target="_blank" rel="noreferrer">{text}</a>
+              </li>
+            ))}
+          </ul>
+        </Tile>
+      </main>
+    </div>
   );
 }
 

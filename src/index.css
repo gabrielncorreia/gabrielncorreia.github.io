@@ -1,0 +1,243 @@
+:root {
+  --night: #0a1724;
+  --panel: rgba(13, 31, 48, 0.9);
+  --frame: #7e4343;
+  --dusk: #e3906f;
+  --glow: #8ccfff;
+  --paper: #e8eef2;
+  --muted: #93a7b8;
+
+  --font-code: 'Fira Code', ui-monospace, monospace;
+
+  --gap: 12px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--night);
+  color: var(--paper);
+  font-family: var(--font-code);
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Wallpaper lives on a fixed layer so it doesn't jump on mobile scroll. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(10, 23, 36, 0.15), rgba(10, 23, 36, 0.55)),
+    url(images/1640134417606.gif) center / cover no-repeat;
+  image-rendering: pixelated;
+}
+
+a {
+  color: var(--glow);
+}
+
+:focus-visible {
+  outline: 2px dashed var(--glow);
+  outline-offset: 3px;
+}
+
+/* ---------- Top bar ---------- */
+
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 16px;
+  height: 36px;
+  padding: 0 var(--gap) 0 0;
+  background: rgba(10, 23, 36, 0.94);
+  border-bottom: 2px solid var(--frame);
+  font-family: var(--font-code);
+  font-size: 15px;
+}
+
+.workspaces {
+  display: flex;
+}
+
+.workspaces a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.workspaces a span {
+  color: var(--paper);
+}
+
+.workspaces a:hover {
+  background: rgba(140, 207, 255, 0.12);
+}
+
+.workspaces a.active {
+  background: var(--glow);
+  color: var(--night);
+}
+
+.workspaces a.active span {
+  color: var(--night);
+}
+
+.workspaces a:focus-visible {
+  outline-offset: -4px;
+}
+
+.bar-motto {
+  margin: 0;
+  align-self: center;
+  color: var(--muted);
+}
+
+.bar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.lang-switch {
+  display: flex;
+  border: 1px solid var(--frame);
+}
+
+.lang-switch button {
+  padding: 0 8px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 13px;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.lang-switch button:hover {
+  color: var(--paper);
+}
+
+.lang-switch button[aria-pressed='true'] {
+  background: var(--frame);
+  color: var(--paper);
+}
+
+.bar-clock {
+  color: var(--dusk);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Tiles (windows) ---------- */
+
+.tiles {
+  display: grid;
+  gap: var(--gap);
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: var(--gap);
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--panel);
+  border: 2px solid var(--frame);
+}
+
+.tile-title {
+  margin: 0;
+  padding: 2px 10px 3px;
+  background: var(--frame);
+  font-family: var(--font-code);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.tile-body {
+  flex: 1;
+  padding: 20px 22px 24px;
+}
+
+/* Focus follows mouse, like i3: the active window gets the screen-glow frame. */
+.tile:hover,
+.tile:focus-within {
+  border-color: var(--glow);
+}
+
+.tile:hover .tile-title,
+.tile:focus-within .tile-title {
+  background: var(--glow);
+  color: var(--night);
+}
+
+/* ---------- Pixel button ---------- */
+
+.pixel-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background: var(--glow);
+  color: var(--night);
+  font-family: var(--font-code);
+  font-size: 17px;
+  text-decoration: none;
+  /* Stepped corners: four flat shadows instead of a border. */
+  box-shadow:
+    0 -3px 0 0 var(--glow),
+    0 3px 0 0 var(--glow),
+    -3px 0 0 0 var(--glow),
+    3px 0 0 0 var(--glow),
+    0 9px 0 -3px #3d7fae;
+}
+
+.pixel-button:hover {
+  filter: brightness(1.08);
+}
+
+.pixel-button:active {
+  transform: translateY(3px);
+  box-shadow:
+    0 -3px 0 0 var(--glow),
+    0 3px 0 0 var(--glow),
+    -3px 0 0 0 var(--glow),
+    3px 0 0 0 var(--glow);
+}
+
+@media (max-width: 560px) {
+  .bar-motto {
+    display: none;
+  }
+
+  .workspaces a {
+    padding: 0 10px;
+  }
+
+  .tile-body {
+    padding: 16px 16px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pixel-button:active {
+    transform: none;
+  }
+}

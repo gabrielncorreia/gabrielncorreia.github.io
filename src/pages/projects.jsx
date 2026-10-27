@@ -1,123 +1,101 @@
 /* eslint-disable react/react-in-jsx-scope */
+import { Trans, useTranslation } from 'react-i18next';
 import './projects.css';
-// import artWithPixels from '../images/art-with-pixels.gif';
-import gif1 from '../images/iai0p5j9cuszzpqxdmws.gif';
-// import gif2 from '../images/1444070216325387.gif';
+import Bar from '../components/Bar';
+import Tile from '../components/Tile';
+
+const GITHUB = 'https://github.com/gabrielncorreia';
+
+// Strongest first. `repo` is the GitHub repo name and the translation key;
+// `live` means it is deployed to GitHub Pages at gabrielncorreia.github.io/<repo>.
+const PROJECTS = [
+  {
+    repo: 'TFC',
+    name: 'Trybe Futebol Clube',
+    tags: ['TypeScript', 'Node.js', 'Express', 'Sequelize', 'MySQL', 'JWT', 'Docker', 'Mocha'],
+    featured: true,
+  },
+  {
+    repo: 'recipe-app', name: 'Recipes App', tags: ['React', 'Hooks', 'Context API'], live: true,
+  },
+  {
+    repo: 'trivia', name: 'Trivia', tags: ['React', 'Redux'], live: true,
+  },
+  { repo: 'starwars-planets', name: 'Star Wars Planets', tags: ['React', 'Hooks', 'Context API'] },
+  {
+    repo: 'trybewallet', name: 'TrybeWallet', tags: ['React', 'Redux'], live: true,
+  },
+  { repo: 'frontend-online-store', name: 'Front-end Online Store', tags: ['React'] },
+  {
+    repo: 'trybetunes', name: 'TrybeTunes', tags: ['React'], live: true,
+  },
+  { repo: 'shopping-cart', name: 'Shopping Cart', tags: ['JavaScript'] },
+];
+
+// Personal work without public repos yet; ids are translation keys under projects.side.
+const SIDE_PROJECTS = [
+  { id: 'ecclesia', tags: ['PixiJS v8', 'Vite', 'TypeScript', 'React'] },
+  { id: 'crivo', tags: ['LLM', 'WebExtensions', 'Firefox', 'Chromium'] },
+  { id: 'instagram', tags: ['WebExtensions', 'Firefox Add-ons'] },
+];
 
 export default function Projects() {
+  const { t } = useTranslation();
+
   return (
-    <main id="main-projects-div">
-      <header id="my-projects-header">
-        <h1>My Projects</h1>
-        <h4>Aqui estão alguns dos projetos que fiz ao longo da Trybe.</h4>
-      </header>
-      <div id="gifs-div">
-        <img src={gif1} alt="" />
-        <h4>Page under construction!!</h4>
-        <hr />
-      </div>
-      <section id="all-projects-section">
-        <div className="projetos-div">
-          <div className="projeto-div">
-            <div className="div-img" />
-            <h4>Recipe App</h4>
-            <p>O objetivo desse trabalho</p>
-            <div className="repo-live-div">
-              <h5>Repositório</h5>
-              <h5>Live Demo</h5>
+    <div className="desktop">
+      <Bar />
+      <main className="tiles projects">
+        <Tile title={t('projects.title')} className="tile-intro">
+          <h1 className="projects-heading">{t('projects.heading')}</h1>
+          <p>
+            <Trans
+              i18nKey="projects.intro"
+              components={{
+                github: <a href={GITHUB} target="_blank" rel="noreferrer">GitHub</a>,
+              }}
+            />
+          </p>
+        </Tile>
+
+        <h2 className="section-heading">{t('projects.trybeHeading')}</h2>
+        {PROJECTS.map(({
+          repo, name, tags, featured, live,
+        }) => (
+          <Tile
+            key={repo}
+            title={repo}
+            className={`tile-project${featured ? ' tile-featured' : ''}`}
+          >
+            <h2>{name}</h2>
+            <p>{t(`projects.items.${repo}`)}</p>
+            <ul className="tags">
+              {tags.map((tag) => <li key={tag}>{tag}</li>)}
+            </ul>
+            <div className="project-links">
+              {live && (
+                <a href={`https://gabrielncorreia.github.io/${repo}/`} target="_blank" rel="noreferrer">
+                  {t('projects.liveDemo')}
+                </a>
+              )}
+              <a href={`${GITHUB}/${repo}`} target="_blank" rel="noreferrer">
+                {t('projects.viewCode')}
+              </a>
             </div>
-          </div>
-          <div className="projeto-div">
-            <div className="div-img" />
-            <h4>Trivia</h4>
-            <p>O objetivo desse trabalho</p>
-            <div className="repo-live-div">
-              <h5>Repositório</h5>
-              <h5>Live Demo</h5>
-            </div>
-          </div>
-          <div className="projeto-div">
-            <div className="div-img" />
-            <h4>Trybe Futebol Clube (TFC)</h4>
-            <p>O objetivo desse trabalho</p>
-            <div className="repo-live-div">
-              <h5>Repositório</h5>
-              <h5>Live Demo</h5>
-            </div>
-          </div>
-          <div className="projeto-div">
-            <div className="div-img" />
-            <h4>Trybetunes</h4>
-            <p>O objetivo desse trabalho</p>
-            <div className="repo-live-div">
-              <h5>Repositório</h5>
-              <h5>Live Demo</h5>
-            </div>
-          </div>
-          <div className="projeto-div">
-            <div className="div-img" />
-            <h4>Front-end Online Store</h4>
-            <p>O objetivo desse trabalho</p>
-            <div className="repo-live-div">
-              <h5>Repositório</h5>
-              <h5>Live Demo</h5>
-            </div>
-          </div>
-          <div className="projeto-div">
-            <div className="div-img" />
-            <h4>TrybeWallet</h4>
-            <p>O objetivo desse trabalho</p>
-            <div className="repo-live-div">
-              <h5>Repositório</h5>
-              <h5>Live Demo</h5>
-            </div>
-          </div>
-          <div className="projeto-div">
-            <div className="div-img" />
-            <h4>Star Wars Planets</h4>
-            <p>O objetivo desse trabalho</p>
-            <div className="repo-live-div">
-              <h5>Repositório</h5>
-              <h5>Live Demo</h5>
-            </div>
-          </div>
-          <div className="projeto-div">
-            <div className="div-img" />
-            <h4>TrybeWarts</h4>
-            <p>O objetivo desse trabalho</p>
-            <div className="repo-live-div">
-              <h5>Repositório</h5>
-              <h5>Live Demo</h5>
-            </div>
-          </div>
-        </div>
-        {/* <div className="projetos-div">
-          <h3>Projetos do Módulo de Front-End</h3>
-          <div className="projetos-fundamento-div">
-            <div className="projeto-fundamento-1">
-              <img src={artWithPixels} width="250px" alt="" />
-              <p>O objetivo desse trabalho...</p>
-            </div>
-            <div className="projeto-fundamento-1">
-              <img src={artWithPixels} width="250px" alt="" />
-              <p>O objetivo desse trabalho...</p>
-            </div>
-          </div>
-        </div> */}
-        {/* <div className="projetos-div">
-          <h3>Projetos do Módulo de Back-End</h3>
-          <div className="projetos-fundamento-div">
-            <div className="projeto-fundamento-1">
-              <img src={artWithPixels} width="250px" alt="" />
-              <p>O objetivo desse trabalho...</p>
-            </div>
-            <div className="projeto-fundamento-1">
-              <img src={artWithPixels} width="250px" alt="" />
-              <p>O objetivo desse trabalho...</p>
-            </div>
-          </div>
-        </div> */}
-      </section>
-    </main>
+          </Tile>
+        ))}
+
+        <h2 className="section-heading">{t('projects.sideHeading')}</h2>
+        {SIDE_PROJECTS.map(({ id, tags }) => (
+          <Tile key={id} title={id} className="tile-project">
+            <h2>{t(`projects.side.${id}.name`)}</h2>
+            <p>{t(`projects.side.${id}.about`)}</p>
+            <ul className="tags">
+              {tags.map((tag) => <li key={tag}>{tag}</li>)}
+            </ul>
+          </Tile>
+        ))}
+      </main>
+    </div>
   );
 }

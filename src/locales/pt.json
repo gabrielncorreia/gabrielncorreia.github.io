@@ -1,0 +1,135 @@
+{
+  "bar": {
+    "pages": "Páginas",
+    "home": "início",
+    "projects": "projetos",
+    "language": "Idioma",
+    "experience": "experiência"
+  },
+  "home": {
+    "portraitTitle": "retrato.png",
+    "portraitAlt": "Retrato de Gabriel em pixel art",
+    "aboutTitle": "sobre.txt",
+    "role": "Engenheiro de software full-stack",
+    "bio": "Sou engenheiro de software full-stack com mais de quatro anos de experiência construindo e mantendo plataformas web em produção: React e Next.js no front-end, Node.js, GraphQL e C# no back-end, e infraestrutura na AWS com Terraform e Kubernetes. Liderei o desenvolvimento de uma plataforma de participação cidadã usada por prefeituras do Reino Unido, trabalhando com times no Reino Unido, Canadá e Israel. Cheguei à programação pela Economia, com um TCC sobre Bitcoin, e me formei em desenvolvimento de software pela Trybe.",
+    "cta": "Ver meus projetos",
+    "stackTitle": "stack",
+    "contactTitle": "contato",
+    "ctaExperience": "Ver minha experiência",
+    "stackGroups": {
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "data": "Bancos de dados",
+      "cloud": "Nuvem",
+      "devops": "Infra e DevOps",
+      "mobile": "Mobile"
+    },
+    "certsTitle": "certificações"
+  },
+  "projects": {
+    "title": "projetos.md",
+    "heading": "Meus projetos",
+    "intro": "Projetos do bootcamp com demo e código, e o que construo no meu tempo livre. Tudo o que é público está no <github>GitHub</github>.",
+    "items": {
+      "TFC": "API de partidas e classificação de futebol com login via JWT, feita em TypeScript com Express e Sequelize sobre MySQL. Roda em Docker e tem testes de integração.",
+      "recipe-app": "Projeto em grupo: app de receitas de comidas e bebidas com busca, favoritos e progresso de preparo passo a passo.",
+      "trivia": "Projeto em grupo: jogo de perguntas com timer, placar e ranking de jogadores, usando uma API externa de trivia.",
+      "starwars-planets": "Tabela de planetas de Star Wars com filtros combináveis e ordenação, com estado gerenciado via Context API.",
+      "trybewallet": "Carteira de despesas com conversão de moedas em tempo real a partir de uma API de câmbio.",
+      "frontend-online-store": "Projeto em grupo: loja virtual com busca por categoria, carrinho e avaliações de produtos, usando a API do Mercado Livre.",
+      "trybetunes": "Busca de álbuns e músicas com prévia de áudio e lista de favoritas.",
+      "shopping-cart": "Carrinho de compras em JavaScript puro usando a API do Mercado Livre."
+    },
+    "viewCode": "Ver código",
+    "liveDemo": "Ver ao vivo",
+    "trybeHeading": "Projetos da Trybe",
+    "sideHeading": "Projetos pessoais",
+    "side": {
+      "ecclesia": {
+        "name": "Ecclesia",
+        "about": "Linha do tempo interativa da história católica e cristã, renderizada em canvas com WebGL, em português e inglês."
+      },
+      "crivo": {
+        "name": "Crivo",
+        "about": "Usa um LLM para apontar afirmações sem fonte e falácias lógicas em notícias brasileiras, entregue como newsletter e como extensão para Firefox e Chromium."
+      },
+      "instagram": {
+        "name": "Extensão para Instagram",
+        "about": "Extensão para Firefox que esconde elementos escolhidos no Instagram web, publicada na loja de complementos do Firefox."
+      }
+    }
+  },
+  "experience": {
+    "title": "experiencia.md",
+    "heading": "Experiência",
+    "intro": "Mais de quatro anos como engenheiro de software full-stack, de funcionalidades de produto a suporte em produção e infraestrutura na nuvem.",
+    "strengthsLabel": "No que sou mais forte",
+    "strengths": [
+      "Aplicações web full-stack",
+      "Back-end e integrações de API",
+      "Bancos de dados",
+      "Infraestrutura na AWS",
+      "Docker e Kubernetes",
+      "Infraestrutura como código",
+      "Resolução de problemas em produção",
+      "Modernização e migração de sistemas legados",
+      "Responsabilidade técnica e liderança"
+    ],
+    "items": {
+      "civic": {
+        "file": "plataforma-civica.log",
+        "title": "Plataforma de participação cidadã",
+        "period": "Junho de 2023 a junho de 2026",
+        "role": "Engenheiro full-stack, desenvolvedor líder por cerca de dois anos",
+        "summary": "Plataforma que prefeituras do Reino Unido usam para fazer consultas públicas e coletar a opinião da comunidade.",
+        "bullets": [
+          "Funcionalidades full-stack, integrações, correções e suporte em produção",
+          "Jobs agendados, analytics e pipelines de dados",
+          "Trabalho diário no AWS EKS: deploys em Kubernetes com Helm e Docker",
+          "Migração de contas de clientes, usuários e contribuições de consultas após uma aquisição",
+          "Trabalho diário com times no Reino Unido, Canadá e Israel"
+        ]
+      },
+      "migration": {
+        "file": "migracao-lojas.log",
+        "title": "Plataforma de migração de e-commerce",
+        "period": "",
+        "role": "Engenheiro full-stack, back-end em C#",
+        "summary": "Plataforma que migra lojas virtuais inteiras entre WooCommerce e Shopify, nos dois sentidos.",
+        "bullets": [
+          "Migra tudo o que as APIs das lojas expõem: produtos, categorias, pedidos, clientes, descontos, mídia, páginas e posts de blog",
+          "Back-end em C# integrando as APIs REST do WooCommerce e do Shopify com chaves de API e OAuth",
+          "Começou na AWS com DynamoDB e infraestrutura em AWS CDK",
+          "Depois, migrei a plataforma inteira para o Azure, com os dados no Cosmos DB"
+        ]
+      },
+      "cloud": {
+        "file": "nuvem-devops.log",
+        "title": "Infraestrutura na nuvem e DevOps",
+        "period": "",
+        "role": "",
+        "summary": "Trabalho de infraestrutura em vários projetos, principalmente na AWS e um pouco no Azure.",
+        "bullets": [
+          "Migração de workloads do AWS Lambda para sub-redes privadas de VPC, com Transit Gateway para conectividade privada",
+          "Infraestrutura como código com Terraform e AWS CDK",
+          "Workloads em Kubernetes no EKS, com deploy via Helm e Docker",
+          "Uso de Lambda, API Gateway, SQS, SNS, Step Functions, S3, SES, DynamoDB, Route 53, ACM e CloudWatch",
+          "Migração de uma plataforma da AWS para o Azure, incluindo os dados do DynamoDB para o Cosmos DB",
+          "Pipelines de deploy e automação de infraestrutura"
+        ]
+      },
+      "independent": {
+        "file": "independentes.log",
+        "title": "Projetos independentes",
+        "period": "",
+        "role": "",
+        "summary": "Produtos que projeto e construo de ponta a ponta no meu tempo livre.",
+        "bullets": [
+          "Ecclesia: linha do tempo em WebGL renderizada com PixiJS v8 sobre React, Vite e TypeScript, em dois idiomas",
+          "Crivo: usa um LLM para apontar afirmações sem fonte e falácias lógicas em notícias brasileiras, como newsletter e extensão para Firefox e Chromium",
+          "Publiquei uma extensão de navegador na loja de complementos do Firefox"
+        ]
+      }
+    }
+  }
+}

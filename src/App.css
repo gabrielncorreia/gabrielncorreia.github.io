@@ -1,263 +1,208 @@
-@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css);
-
-body {
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Fira Code', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: url(images/1640134417606.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: azure;
+.home {
+  grid-template-columns: minmax(240px, 330px) 1fr 1fr;
+  grid-template-areas:
+    'portrait about   about'
+    'stack    stack   certs'
+    'stack    stack   contact';
+  align-content: center;
+  min-height: calc(100vh - 36px);
 }
 
-.App {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 99.6vh;
+.tile-portrait { grid-area: portrait; }
+.tile-about { grid-area: about; }
+.tile-stack { grid-area: stack; }
+.tile-certs { grid-area: certs; }
+.tile-contact { grid-area: contact; }
+
+.tile-portrait .tile-body {
+  position: relative;
+  min-height: 320px;
+  padding: 0;
+  background: var(--night);
 }
 
-#main-header-div {
-  border: 1px solid #7E4343;
-  display: flex;
-  justify-content: space-between;
-  /* margin: 10px; */
-  /* height: 20px; */
-  box-shadow: 1px 1px 1px 1px #7E4343;
-  font-size: 12px;
-}
-
-#main-header-div h4 {
-  /* border: 1px solid red; */
-  margin: 5px;
-  margin-right: 7px;
-  margin-left: 7px;
-}
-
-#main-div {
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  border: 2px solid #7E4343;
-  background-color: #0C2534;
-  box-shadow: 1px 1px 1px 1px #7E4343;
-  height: 500px;
-  width: 1000px;
-  /* padding: 10px; */
-}
-
-#img-textbox-div {
-  /* border: 1px solid blueviolet; */
-  box-shadow: 1px 1px 1px 1px #7E4343;
-  /* margin: 10px; */
-  display: flex;
-  /* justify-content: space-evenly; */
+.portrait,
+.portrait canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
   height: 100%;
 }
 
-#img-div {
-  border: 2px solid #7E4343;
-  /* margin: 10px; */
-  /* box-shadow: 1px 1px 1px 1px #7E4343; */
-  width: 400px;
-  background-image: url(images/esse4.jpg);
-  background-size: 625px;
-  background-position-x: -240px;
-  /* background-position: right; */
-  background-repeat: no-repeat;
-  /* filter: grayscale(100%); */
+.portrait canvas {
+  object-fit: cover;
 }
 
-#header-textbox-div {
-  /* border: 1px solid #61dafb; */
-  /* margin: 10px; */
-  width: 100%;
-  box-shadow: 1px 1px 1px 1px #7E4343;
+.portrait-pixels {
+  image-rendering: pixelated;
 }
 
-#header-div {
-  border: 2px solid #7E4343;
-  /* margin: 10px; */
-  box-shadow: 1px 1px 1px 1px #7E4343;
+.hero-name {
+  margin: 0;
+  font-family: var(--font-code);
+  font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+  font-weight: 600;
+  line-height: 1;
+  /* Hard extrusion, one pixel layer per step. */
+  text-shadow: 2px 2px 0 var(--frame), 4px 4px 0 var(--night);
 }
 
-#header-div h4 {
-  margin: 3px;
-  margin-left: 7px;
-  /* font-family: monospace; */
-  font-size: 12px;
+.hero-role {
+  margin: 14px 0 0;
+  color: var(--dusk);
+  font-family: var(--font-code);
+  font-size: 1.25rem;
 }
 
-#textbox-div {
-  text-align: center;
-  border: 1px solid #7E4343;
-  /* margin: 10px; */
-  box-shadow: 1px 1px 1px 1px #7E4343;
-  height: 94.5%;
-  padding-right: 10px;
-  padding-left: 10px;
-  /* font-family: monospace; */
-  font-size: 15px;
+.hero-bio {
+  max-width: 62ch;
+  margin: 16px 0 28px;
 }
 
-/* #textbox-div h4 {
-  text-decoration: underline;
-} */
-
-#about-me-div p {
-  text-align: justify;
-}
-
-#skills-icon-div {
-  /* border: 1px solid red; */
+.hero-actions {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 28px;
 }
 
-#skills-icon-div img {
-  /* margin-left: 4px; */
-  height:30px;
-  width:40px;
+.text-link {
+  font-size: 15px;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
 }
 
-#skills-div i {
-  font-size: 30px;
+.text-link:hover {
+  border-bottom-color: var(--glow);
 }
 
-#my-projects-button {
-  background: aliceblue;
-  border-bottom: 3px inset rgba(0,0,0,.5);
-  border-left: 3px inset rgba(0,0,0,.5);
-  border-right: 3px inset rgba(255, 255, 255, .5);
-  border-top: 3px inset rgba(255, 255, 255, .5);
-  box-sizing: border-box;
-  color: #0C2534;
-  cursor: pointer;
-  padding: 5px;
-  font-family: "Fira Code";
-  font-size: 13px;
+.stack-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 22px 28px;
+}
+
+.stack-group h2 {
+  margin: 0 0 10px;
+  color: var(--dusk);
+  font-size: 14px;
   font-weight: 500;
 }
 
-#my-projects-button:hover {
-  background: rgb(237, 237, 237);
-}
-
-#my-projects-button:active {
-  border-bottom: 1px inset rgba(0,0,0,.5);
-  border-left: 1px inset rgba(0,0,0,.5);
-  border-right: 1px inset rgba(255, 255, 255, .5);
-  border-top: 1px inset rgba(255, 255, 255, .5);
-  margin: 2px;
-}
-
-#icons-div {
-  /* border: 1px solid red; */
+.stack-group ul {
   display: flex;
-  justify-content: center;
-  /* align-items: center; */
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-#contact-div img {
-  margin-right: 30px;
-  height:30px;
-  /* width:40px; */
+.stack-group li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 10px;
+  border: 1px solid rgba(147, 167, 184, 0.35);
+  font-size: 13px;
+  line-height: 1.4;
 }
 
-#contact-div i {
-  color: aliceblue;
+.stack-group img,
+.stack-group i {
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.stack-group i {
+  color: var(--paper);
+}
+
+.cert-list {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cert-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cert-list img {
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.cert-list p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.cert-code {
+  color: var(--dusk);
+}
+
+.contact-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-list li {
+  display: grid;
+  gap: 2px;
+}
+
+.contact-list span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.contact-list a {
+  justify-self: start;
+  font-size: 15px;
   text-decoration: none;
-  font-size: 30px;
+  overflow-wrap: anywhere;
+  border-bottom: 2px solid transparent;
 }
 
-#contact-div a {
-  text-decoration: none;
+.contact-list a:hover {
+  border-bottom-color: var(--glow);
 }
 
-/* Responsive CSS for smartphones */
-@media only screen and (max-width: 850px) {
-  body {
-    background-size: auto;
-    /* color: aqua; */
-  }
-
-  #main-div {
-    /* border: 2px solid red; */
-    width: 450px;
-    height: fit-content;
-  }
-
-  #main-header-div {
-    font-size: 10px;
-  }
-
-  #header-div h4 {
-    font-size: 10px;
-  }
-
-	#img-div {
-    display: none;
-  }
-
-  #textbox-div {
-    border: none;
-    box-shadow: none;
-    font-size: 12.5px;
-  }
-
-  #skills-icon-div {
-    flex-wrap: wrap;
-  }
-
-  #skills-icon-div img {
-    /* margin: 5px; */
-    margin-bottom: 10px;
-    margin-right: 10px;
-  }
-
-  #my-projects-button {
-    font-size: 11px;
-    font-weight: 700;
-  }
-
-  #contact-div {
-    /* border: 1px solid red; */
-    padding-top: 5px;
-    margin-bottom: 20px;
+@media (max-width: 1024px) {
+  .home {
+    grid-template-columns: minmax(200px, 280px) 1fr;
+    grid-template-areas:
+      'portrait about'
+      'stack    stack'
+      'certs    contact';
+    align-content: start;
   }
 }
 
-/* Responsive CSS for HD displays */
-@media only screen and (max-width:1600px) { 
-  #main-div {
-    height: fit-content;
-    width: 850px;
+@media (max-width: 700px) {
+  .home {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'portrait'
+      'about'
+      'stack'
+      'certs'
+      'contact';
   }
 
-  #img-div {
-    width: 350px;
-    background-size: 600px;
-    background-position-x: -250px;
-    /* background-position-y: 10px; */
-  }
-
-  #skills-icon-div {
-    margin-bottom: 25px;
-  }
-
-  #textbox-div {
-    border: none;
-    box-shadow: none;
-    font-size: 13.5px;
-  }
-
-  #contact-div {
-    /* border: 1px solid red; */
-    padding-top: 5px;
-    margin-bottom: 15px;
+  .tile-portrait .tile-body {
+    min-height: 0;
+    aspect-ratio: 1;
   }
 }

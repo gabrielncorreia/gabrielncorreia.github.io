@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
+import './i18n';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import Projects from './pages/projects';
+import Experience from './pages/experience';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -10,6 +13,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/experience" element={<Experience />} />
         <Route path="/projects" element={<Projects />} />
       </Routes>
     </BrowserRouter>
