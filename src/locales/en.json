@@ -32,17 +32,13 @@
     "intro": "What I build on my own time, plus the projects I made while learning to program at the Trybe bootcamp. Everything public is on <github>GitHub</github>.",
     "items": {
       "TFC": "Football matches and standings API with JWT login, built in TypeScript with Express and Sequelize on MySQL. Runs in Docker and is covered by integration tests.",
-      "recipe-app": "Group project: a food and drink recipes app with search, favorites and step-by-step cooking progress.",
-      "trivia": "Group project: a quiz game with a timer, score and player ranking, using an external trivia API.",
-      "starwars-planets": "Star Wars planets table with combinable filters and sorting, with state managed through Context API.",
-      "trybewallet": "Expense wallet with live currency conversion from an exchange-rate API.",
-      "frontend-online-store": "Group project: an online store with real Mercado Livre products and prices in reais, categories, search, reviews and a cart. Data comes through a Cloudflare Worker I wrote to keep the API token off the browser.",
-      "trybetunes": "Album and song search with audio previews and a favorites list.",
-      "shopping-cart": "A single-page store in plain JavaScript with real Mercado Livre products and a receipt-style cart, served by the same Cloudflare Worker."
+      "frontend-online-store": "Started as a Trybe group project: an online store with real Mercado Livre products and prices in reais, categories, search, reviews and a cart. When Mercado Livre closed its public search in 2026, I wrote a Cloudflare Worker to keep it running. The Worker holds the API credentials and serves only my two storefronts, through Turnstile-verified sessions signed with HMAC. It validates every input before calling Mercado Livre and rate-limits each visitor.",
+      "shopping-cart": "A single-page store in plain JavaScript with real Mercado Livre products and a receipt-style cart. It reads from the same Worker and passes the same Turnstile check before it gets any data."
     },
     "viewCode": "View code",
     "liveDemo": "Live demo",
-    "trybeHeading": "Trybe projects, built while I was learning to program",
+    "trybeHeading": "Projects I started at Trybe, while learning to program",
+    "trybeMore": "The rest of my bootcamp work is collected in <collection>Trybe projects</collection>, where every app runs in the browser.",
     "sideHeading": "Side projects",
     "side": {
       "ecclesia": {

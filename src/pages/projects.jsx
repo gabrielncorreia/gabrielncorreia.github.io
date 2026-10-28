@@ -13,28 +13,12 @@ const PROJECTS = [
     repo: 'TFC',
     name: 'Trybe Futebol Clube',
     tags: ['TypeScript', 'Node.js', 'Express', 'Sequelize', 'MySQL', 'JWT', 'Docker', 'Mocha'],
-    featured: true,
   },
   {
-    repo: 'recipe-app', name: 'Recipes App', tags: ['React', 'Hooks', 'Context API'], live: true,
+    repo: 'frontend-online-store', name: 'Vitrine', tags: ['React', 'Context API', 'Cloudflare Workers', 'Turnstile'], live: true,
   },
   {
-    repo: 'trivia', name: 'Trivia', tags: ['React', 'Redux'], live: true,
-  },
-  {
-    repo: 'starwars-planets', name: 'Star Wars Planets', tags: ['React', 'Hooks', 'Context API'], live: true,
-  },
-  {
-    repo: 'trybewallet', name: 'TrybeWallet', tags: ['React', 'Redux'], live: true,
-  },
-  {
-    repo: 'frontend-online-store', name: 'Vitrine', tags: ['React', 'Context API', 'Cloudflare Workers'], live: true,
-  },
-  {
-    repo: 'trybetunes', name: 'TrybeTunes', tags: ['React'], live: true,
-  },
-  {
-    repo: 'shopping-cart', name: 'Shopping Cart', tags: ['JavaScript', 'Cloudflare Workers'], live: true,
+    repo: 'shopping-cart', name: 'Shopping Cart', tags: ['JavaScript', 'Cloudflare Workers', 'Turnstile'], live: true,
   },
 ];
 
@@ -93,13 +77,9 @@ export default function Projects() {
 
         <h2 className="section-heading">{t('projects.trybeHeading')}</h2>
         {PROJECTS.map(({
-          repo, name, tags, featured, live,
+          repo, name, tags, live,
         }) => (
-          <Tile
-            key={repo}
-            title={repo}
-            className={`tile-project${featured ? ' tile-featured' : ''}`}
-          >
+          <Tile key={repo} title={repo} className="tile-project">
             <h2>{name}</h2>
             <p>{t(`projects.items.${repo}`)}</p>
             <ul className="tags">
@@ -117,6 +97,14 @@ export default function Projects() {
             </div>
           </Tile>
         ))}
+        <p className="section-heading">
+          <Trans
+            i18nKey="projects.trybeMore"
+            components={{
+              collection: <a href="https://gabrielncorreia.github.io/trybe-projects/" target="_blank" rel="noreferrer">Trybe projects</a>,
+            }}
+          />
+        </p>
       </main>
     </div>
   );

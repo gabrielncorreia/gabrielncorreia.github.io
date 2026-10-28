@@ -32,17 +32,13 @@
     "intro": "O que construo no meu tempo livre, e os projetos que fiz enquanto aprendia a programar no bootcamp da Trybe. Tudo o que é público está no <github>GitHub</github>.",
     "items": {
       "TFC": "API de partidas e classificação de futebol com login via JWT, feita em TypeScript com Express e Sequelize sobre MySQL. Roda em Docker e tem testes de integração.",
-      "recipe-app": "Projeto em grupo: app de receitas de comidas e bebidas com busca, favoritos e progresso de preparo passo a passo.",
-      "trivia": "Projeto em grupo: jogo de perguntas com timer, placar e ranking de jogadores, usando uma API externa de trivia.",
-      "starwars-planets": "Tabela de planetas de Star Wars com filtros combináveis e ordenação, com estado gerenciado via Context API.",
-      "trybewallet": "Carteira de despesas com conversão de moedas em tempo real a partir de uma API de câmbio.",
-      "frontend-online-store": "Projeto em grupo: loja virtual com produtos reais do Mercado Livre e preços em reais, categorias, busca, avaliações e carrinho. Os dados passam por um Cloudflare Worker que escrevi para manter o token da API fora do navegador.",
-      "trybetunes": "Busca de álbuns e músicas com prévia de áudio e lista de favoritas.",
-      "shopping-cart": "Loja de página única em JavaScript puro com produtos reais do Mercado Livre e um carrinho em forma de cupom fiscal, servida pelo mesmo Cloudflare Worker."
+      "frontend-online-store": "Começou como projeto em grupo na Trybe: loja virtual com produtos reais do Mercado Livre e preços em reais, categorias, busca, avaliações e carrinho. Quando o Mercado Livre fechou a busca pública em 2026, escrevi um Cloudflare Worker para mantê-la funcionando. O Worker guarda as credenciais da API e só atende as minhas duas lojas, por meio de sessões verificadas pelo Turnstile e assinadas com HMAC. Ele valida toda entrada antes de chamar o Mercado Livre e limita as requisições de cada visitante.",
+      "shopping-cart": "Loja de página única em JavaScript puro com produtos reais do Mercado Livre e um carrinho em forma de cupom fiscal. Lê do mesmo Worker e passa pela mesma verificação do Turnstile antes de receber qualquer dado."
     },
     "viewCode": "Ver código",
     "liveDemo": "Ver ao vivo",
-    "trybeHeading": "Projetos da Trybe, feitos enquanto eu aprendia a programar",
+    "trybeHeading": "Projetos que comecei na Trybe, enquanto aprendia a programar",
+    "trybeMore": "O restante dos meus projetos do bootcamp está reunido em <collection>Projetos da Trybe</collection>, onde todos rodam no navegador.",
     "sideHeading": "Projetos pessoais",
     "side": {
       "ecclesia": {
