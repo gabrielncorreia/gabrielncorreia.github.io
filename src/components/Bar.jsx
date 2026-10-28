@@ -46,7 +46,8 @@ export default function Bar() {
             </button>
           ))}
         </div>
-        <time className="bar-clock" dateTime={clock.toISOString()}>
+        {/* Page translators rewrite "9:21 PM" to "21:21" and fight React's updates. */}
+        <time className="bar-clock" dateTime={clock.toISOString()} translate="no">
           {clock.toLocaleTimeString(locale)}
         </time>
       </div>
