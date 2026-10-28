@@ -143,6 +143,7 @@ a {
 .bar-clock {
   color: var(--dusk);
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 /* ---------- Tiles (windows) ---------- */
@@ -222,13 +223,46 @@ a {
     3px 0 0 0 var(--glow);
 }
 
-@media (max-width: 560px) {
+/* With the motto, the bar needs ~682px on one row; below that the motto wraps. */
+@media (max-width: 720px) {
   .bar-motto {
     display: none;
   }
+}
+
+@media (max-width: 560px) {
+  /* Workspaces plus clock don't fit one phone-width row: language and clock
+     move to a bottom status bar, like i3bar's default position. */
+  body {
+    padding-bottom: 36px;
+  }
+
+  .bar-right {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: space-between;
+    height: 36px;
+    padding: 0 var(--gap);
+    background: rgba(10, 23, 36, 0.94);
+    border-top: 2px solid var(--frame);
+  }
+
+  .bar {
+    padding-right: 0;
+  }
+
+  /* Anything wider than the screen makes phones zoom the layout out and push
+     the bottom bar off-screen, so a too-long nav scrolls inside the bar instead. */
+  .workspaces {
+    min-width: 0;
+    overflow-x: auto;
+  }
 
   .workspaces a {
-    padding: 0 10px;
+    gap: 6px;
+    padding: 0 8px;
   }
 
   .tile-body {
