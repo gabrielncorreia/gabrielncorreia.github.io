@@ -25,6 +25,11 @@ const PROJECTS = [
 // Personal work without public repos; ids are translation keys under projects.side.
 const SIDE_PROJECTS = [
   {
+    id: 'dead-mans-luck',
+    tags: ['PixiJS v8', 'React', 'TypeScript', 'GSAP', 'Vite', 'Capacitor', 'Playwright'],
+    live: 'https://dead-mans-luck.pages.dev/',
+  },
+  {
     id: 'ecclesia',
     tags: ['PixiJS v8', 'React', 'TypeScript', 'Vite', 'Wikidata'],
     live: 'https://ecclesia-7o1.pages.dev/',
