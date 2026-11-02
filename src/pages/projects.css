@@ -148,3 +148,36 @@
 .project-links a:hover {
   border-bottom-color: var(--glow);
 }
+
+/* Experience windows that hold several jobs or projects take the full row. */
+.tile-wide {
+  grid-column: 1 / -1;
+}
+
+.work-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 28px;
+  margin-top: 8px;
+}
+
+/* Each section stacks like a small window: bullets grow so the tags line up at the bottom. */
+.work-section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  border-top: 1px solid rgba(147, 167, 184, 0.3);
+}
+
+/* Sections differ in length; tags follow their own bullets instead of a shared bottom line. */
+.tile-work .work-section .bullets {
+  flex: none;
+}
+
+.work-section h3 {
+  margin: 0;
+  font-family: var(--font-code);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+}

@@ -41,6 +41,10 @@
     "trybeMore": "O restante dos meus projetos do bootcamp está reunido em <collection>Projetos da Trybe</collection>, onde todos rodam no navegador.",
     "sideHeading": "Projetos pessoais",
     "side": {
+      "dead-mans-luck": {
+        "name": "Dead Man’s Luck",
+        "about": "Texas Hold’em sem limite numa mesa à luz de lampião, num saloon da fronteira americana de 1880, contra quatro personagens com seu próprio jeito de jogar, suas falas e seus rostos. A mesa é desenhada com PixiJS sobre React e TypeScript. Os bots só veem o que um jogador naquele lugar veria, regra garantida pelos limites entre módulos e por uma checagem de lint. Roda offline no navegador, em inglês e português, e um app para Android está a caminho."
+      },
       "ecclesia": {
         "name": "Ecclesia",
         "about": "Linha do tempo interativa de 2.000 anos de história católica e cristã: mais de 6.700 eventos desenhados em canvas WebGL, com zoom, busca, navegação por teclado, uma lista acessível e links compartilháveis. Um pipeline em TypeScript monta os dados a partir da Wikidata e da Wikipédia."
@@ -59,7 +63,7 @@
   "experience": {
     "title": "experiencia.md",
     "heading": "Experiência",
-    "intro": "Mais de quatro anos como engenheiro de software full-stack, de funcionalidades de produto a suporte em produção e infraestrutura na nuvem.",
+    "intro": "Mais de quatro anos como engenheiro de software full-stack na Westpoint, uma consultoria de software do Reino Unido, construindo e mantendo plataformas web e sistemas de back-end em produção. Meu trabalho abrange arquitetura de sistemas, confiabilidade em produção, performance, migrações sem downtime e a unificação de plataformas após uma aquisição.",
     "strengthsLabel": "No que sou mais forte",
     "strengths": [
       "Aplicações web full-stack",
@@ -68,51 +72,48 @@
       "Infraestrutura na AWS",
       "Docker e Kubernetes",
       "Infraestrutura como código",
-      "Resolução de problemas em produção",
-      "Modernização e migração de sistemas legados",
+      "Confiabilidade e resolução de problemas em produção",
+      "Otimização de performance",
+      "Migrações sem downtime",
+      "Modernização de sistemas legados",
       "Responsabilidade técnica e liderança"
     ],
     "items": {
+      "westpoint": {
+        "file": "westpoint.log",
+        "title": "Westpoint",
+        "period": "Junho de 2022 até hoje",
+        "role": "Engenheiro de software full-stack",
+        "summary": "Consultoria de engenharia de software do Reino Unido que aloca seus engenheiros em times de clientes e constrói projetos próprios. Trabalhei nos dois, de novas funcionalidades a suporte em produção e infraestrutura na nuvem."
+      },
       "civic": {
         "file": "plataforma-civica.log",
         "title": "Plataforma de participação cidadã",
-        "period": "Junho de 2023 a junho de 2026",
-        "role": "Engenheiro full-stack, desenvolvedor líder por cerca de dois anos",
-        "summary": "Plataforma que prefeituras do Reino Unido usam para fazer consultas públicas e coletar a opinião da comunidade.",
+        "summary": "Projeto de cliente: plataforma de participação que prefeituras do Reino Unido usam para fazer consultas públicas e transformar a opinião da comunidade em evidência para suas decisões. As prefeituras criam pesquisas e propostas, e os moradores respondem, comentam e marcam suas opiniões num mapa.",
         "bullets": [
-          "Funcionalidades full-stack, integrações, correções e suporte em produção",
-          "Jobs agendados, analytics e pipelines de dados",
-          "Trabalho diário no AWS EKS: deploys em Kubernetes com Helm e Docker",
-          "Migração de contas de clientes, usuários e contribuições de consultas após uma aquisição",
+          "Desenvolvimento de novas funcionalidades e integrações, correção de bugs e suporte em produção",
+          "Depois que a empresa foi adquirida no fim de 2025, mantive a plataforma no ar e migrei contas de clientes, usuários e consultas para a plataforma da nova dona sem downtime e sem perda de dados, para que as prefeituras mudassem sem transtornos",
+          "Liderei a reformulação do fluxo de contribuição, o caminho que o morador percorre para responder uma pesquisa",
+          "Criei do zero a seção de análise de mapas do painel das prefeituras, transformando os dados do back-end em gráficos e filtros, e ampliei os gráficos de perfil demográfico e de contribuições dos moradores",
+          "Desenvolvimento e correção dos mapas interativos, onde os moradores marcam pontos, desenham polígonos e colocam marcadores SVG próprios, com os dados geográficos no PostGIS e em GeoJSON, e estabilização de páginas de mapa que travavam",
+          "Reformulação do sistema de login e migração de todas as contas de usuário para uma nova plataforma de identidade",
+          "Eliminação de gargalos nos serviços de back-end em Node.js, incluindo índices no MongoDB para consultas lentas",
+          "Correção de vulnerabilidades encontradas nos testes de invasão trimestrais",
+          "Deploy no AWS EKS com Kubernetes, Helm e Docker, junto com Lambda, SQS, SNS e Step Functions",
           "Trabalho diário com times no Reino Unido, Canadá e Israel"
         ]
       },
-      "migration": {
-        "file": "migracao-lojas.log",
-        "title": "Plataforma de migração de e-commerce",
-        "period": "",
-        "role": "Engenheiro full-stack, back-end em C#",
-        "summary": "Plataforma que migra lojas virtuais inteiras entre WooCommerce e Shopify, nos dois sentidos.",
+      "internal": {
+        "file": "projetos-internos.log",
+        "title": "Projetos internos",
+        "summary": "Produtos da própria Westpoint. O stack mudava de projeto para projeto.",
         "bullets": [
-          "Migra tudo o que as APIs das lojas expõem: produtos, categorias, pedidos, clientes, descontos, mídia, páginas e posts de blog",
-          "Back-end em C# integrando as APIs REST do WooCommerce e do Shopify com chaves de API e OAuth",
-          "Começou na AWS com DynamoDB e infraestrutura em AWS CDK",
-          "Depois, migrei a plataforma inteira para o Azure, com os dados no Cosmos DB"
-        ]
-      },
-      "cloud": {
-        "file": "nuvem-devops.log",
-        "title": "Infraestrutura na nuvem e DevOps",
-        "period": "",
-        "role": "",
-        "summary": "Trabalho de infraestrutura em vários projetos, principalmente na AWS e um pouco no Azure.",
-        "bullets": [
+          "Front-end em Next.js ou React; back-end em C# / .NET ou em Node.js com Express",
+          "Infraestrutura como código com Terraform ou AWS CDK, além de pipelines de deploy e automação de infraestrutura",
+          "Trabalho serverless com Lambda, API Gateway, SQS, SNS, Step Functions, S3, SES, DynamoDB, Route 53, ACM e CloudWatch",
           "Migração de workloads do AWS Lambda para sub-redes privadas de VPC, com Transit Gateway para conectividade privada",
-          "Infraestrutura como código com Terraform e AWS CDK",
-          "Workloads em Kubernetes no EKS, com deploy via Helm e Docker",
-          "Uso de Lambda, API Gateway, SQS, SNS, Step Functions, S3, SES, DynamoDB, Route 53, ACM e CloudWatch",
-          "Migração de uma plataforma da AWS para o Azure, incluindo os dados do DynamoDB para o Cosmos DB",
-          "Pipelines de deploy e automação de infraestrutura"
+          "Migração de uma plataforma inteira da AWS para o Azure, incluindo os dados do DynamoDB para o Cosmos DB",
+          "Integração com APIs REST de terceiros usando chaves de API e OAuth"
         ]
       },
       "independent": {
@@ -122,6 +123,7 @@
         "role": "",
         "summary": "Produtos que projeto e construo de ponta a ponta no meu tempo livre.",
         "bullets": [
+          "Dead Man’s Luck: jogo de Texas Hold’em num saloon de 1880, desenhado com PixiJS sobre React e TypeScript, com bots que só veem o próprio lugar na mesa, jogo offline e um app para Android feito com Capacitor",
           "Ecclesia: linha do tempo com mais de 6.700 eventos renderizada com PixiJS v8 (WebGL) sobre React e TypeScript, com pipeline de dados a partir da Wikidata e da Wikipédia",
           "Crivo: extensão para Firefox e Chromium que aponta afirmações sem fonte e falácias lógicas em notícias brasileiras com um LLM, com uma API em Cloudflare Worker",
           "Hide Instagram Elements: publicada na loja de complementos do Firefox, feita em TypeScript com Preact e Vite para Firefox e Chrome"

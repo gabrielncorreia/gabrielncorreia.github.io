@@ -41,6 +41,10 @@
     "trybeMore": "The rest of my bootcamp work is collected in <collection>Trybe projects</collection>, where every app runs in the browser.",
     "sideHeading": "Side projects",
     "side": {
+      "dead-mans-luck": {
+        "name": "Dead Man’s Luck",
+        "about": "No-limit Texas Hold’em at a lamp-lit table in an 1880s frontier saloon, against four characters with their own playing styles, lines and faces. The table is drawn with PixiJS on React and TypeScript. The bots only see what a player in their seat would see, a rule enforced by module boundaries and a lint check. It plays offline in the browser, in English and Portuguese, and an Android app is on the way."
+      },
       "ecclesia": {
         "name": "Ecclesia",
         "about": "An interactive timeline of 2,000 years of Catholic and Christian history: over 6,700 events drawn on a WebGL canvas, with zoom, search, keyboard navigation, an accessible list view and shareable links. A TypeScript pipeline builds the dataset from Wikidata and Wikipedia."
@@ -59,7 +63,7 @@
   "experience": {
     "title": "experience.md",
     "heading": "Experience",
-    "intro": "Over four years as a full-stack software engineer, from product features to production support and cloud infrastructure.",
+    "intro": "Over four years as a full-stack software engineer at Westpoint, a UK software consultancy, building and maintaining web platforms and back-end systems in production. My work covers system architecture, production reliability, performance, zero-downtime migrations and merging platforms after an acquisition.",
     "strengthsLabel": "What I do best",
     "strengths": [
       "Full-stack web applications",
@@ -68,51 +72,48 @@
       "AWS infrastructure",
       "Docker and Kubernetes",
       "Infrastructure as Code",
-      "Production troubleshooting",
-      "Legacy modernization and migrations",
+      "Production reliability and troubleshooting",
+      "Performance optimization",
+      "Zero-downtime migrations",
+      "Legacy modernization",
       "Technical ownership and leadership"
     ],
     "items": {
+      "westpoint": {
+        "file": "westpoint.log",
+        "title": "Westpoint",
+        "period": "June 2022 to present",
+        "role": "Full-stack software engineer",
+        "summary": "A UK software engineering consultancy that places its engineers with client teams and builds projects of its own. I have worked on both, from new features to production support and cloud infrastructure."
+      },
       "civic": {
         "file": "civic-platform.log",
         "title": "Civic engagement platform",
-        "period": "June 2023 to June 2026",
-        "role": "Full-stack engineer, lead developer for about two years",
-        "summary": "A platform UK local councils use to run public consultations and collect community feedback.",
+        "summary": "A client project: an engagement platform UK local councils use to run public consultations and turn community feedback into evidence for their decisions. Councils build surveys and proposals, and residents answer them, comment and share their views on a map.",
         "bullets": [
-          "Full-stack features, integrations, bug fixes and production support",
-          "Scheduled jobs, analytics and data pipelines",
-          "Daily work on AWS EKS: Kubernetes deployments with Helm and Docker",
-          "Migrated customer accounts, users and consultation contributions after an acquisition",
+          "Built new features and integrations, fixed bugs and supported the platform in production",
+          "After the company was acquired in late 2025, kept the platform running and migrated customer accounts, users and consultations to the new owner’s platform with no downtime and no data lost, so councils moved over without disruption",
+          "Led the rework of the contribution flow, the journey residents follow to complete a survey",
+          "Built the map analytics section of the council dashboard from scratch, turning back-end data into charts and filters, and extended the charts on residents’ demographics and contributions",
+          "Developed and fixed the interactive maps, where residents drop pins, draw polygons and place custom SVG markers, with the geodata in PostGIS and GeoJSON, and made crash-prone map pages stable",
+          "Reworked the login system and migrated every user account to a new identity platform",
+          "Removed back-end bottlenecks in the Node.js services, including MongoDB indexes for slow queries",
+          "Fixed vulnerabilities found in the quarterly penetration tests",
+          "Ran on AWS EKS with Kubernetes, Helm and Docker, alongside Lambda, SQS, SNS and Step Functions",
           "Worked daily with teams in the UK, Canada and Israel"
         ]
       },
-      "migration": {
-        "file": "store-migration.log",
-        "title": "E-commerce migration platform",
-        "period": "",
-        "role": "Full-stack engineer, C# back end",
-        "summary": "A platform that migrates whole online stores between WooCommerce and Shopify, in both directions.",
+      "internal": {
+        "file": "internal-projects.log",
+        "title": "Internal projects",
+        "summary": "Westpoint’s own products. The stack changed from project to project.",
         "bullets": [
-          "Migrates everything the store APIs expose: products, categories, orders, customers, discounts, media, pages and blog posts",
-          "C# back end integrating the WooCommerce and Shopify REST APIs with API keys and OAuth",
-          "Started on AWS with DynamoDB and infrastructure in AWS CDK",
-          "Moved the whole platform to Azure later, with the data on Cosmos DB"
-        ]
-      },
-      "cloud": {
-        "file": "cloud-devops.log",
-        "title": "Cloud infrastructure and DevOps",
-        "period": "",
-        "role": "",
-        "summary": "Infrastructure work across projects, mostly on AWS and some on Azure.",
-        "bullets": [
+          "Front ends in Next.js or React; back ends in C# / .NET or in Node.js with Express",
+          "Infrastructure as code with Terraform or AWS CDK, plus deployment pipelines and infrastructure automation",
+          "Serverless work on Lambda, API Gateway, SQS, SNS, Step Functions, S3, SES, DynamoDB, Route 53, ACM and CloudWatch",
           "Moved AWS Lambda workloads into private VPC subnets, with Transit Gateway for private connectivity",
-          "Provisioned infrastructure as code with Terraform and AWS CDK",
-          "Ran Kubernetes workloads on EKS, deployed with Helm and Docker",
-          "Built on Lambda, API Gateway, SQS, SNS, Step Functions, S3, SES, DynamoDB, Route 53, ACM and CloudWatch",
-          "Moved a platform from AWS to Azure, including its data from DynamoDB to Cosmos DB",
-          "Deployment pipelines and infrastructure automation"
+          "Moved a whole platform from AWS to Azure, including its data from DynamoDB to Cosmos DB",
+          "Integrated third-party REST APIs with API keys and OAuth"
         ]
       },
       "independent": {
@@ -122,6 +123,7 @@
         "role": "",
         "summary": "Products I design and build end to end on my own time.",
         "bullets": [
+          "Dead Man’s Luck: a Texas Hold’em game set in an 1880s saloon, drawn with PixiJS on React and TypeScript, with bots that only see their own seat, offline play and an Android app built with Capacitor",
           "Ecclesia: a timeline of over 6,700 events rendered with PixiJS v8 (WebGL) on React and TypeScript, with a data pipeline built on Wikidata and Wikipedia",
           "Crivo: a Firefox and Chromium extension that flags unsourced claims and logical fallacies in Brazilian news with an LLM, backed by a Cloudflare Worker API",
           "Hide Instagram Elements: published on the Firefox Add-ons store, built in TypeScript with Preact and Vite for Firefox and Chrome"
