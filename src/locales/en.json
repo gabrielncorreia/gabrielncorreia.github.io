@@ -99,8 +99,8 @@
             "text": "Reworked the login system and moved every existing account to a new identity provider."
           },
           {
-            "title": "Cloud migrations",
-            "text": "Moved Lambda workloads into private VPC subnets over Transit Gateway, and helped move a platform from AWS to Azure."
+            "title": "AWS to Azure migration",
+            "text": "Migrated a complete platform from AWS to Azure."
           }
         ]
       },
@@ -114,7 +114,7 @@
           "Reworked authentication and migrated every existing user account to a new identity provider.",
           "Built the dashboard’s map analytics section from scratch: charts and filters over contributions and demographics, fed by the GraphQL API.",
           "Developed and stabilised the interactive maps, with pins, polygon drawing and custom SVG markers, storing geodata in PostGIS and exchanging it as GeoJSON.",
-          "Kept production healthy on AWS EKS with Kubernetes, Helm and Docker: optimised Node.js services and MongoDB queries with new indexes, and fixed penetration-test findings."
+          "Kept production healthy on AWS EKS with Kubernetes, Helm and Docker: optimised Node.js services and MongoDB queries, and fixed vulnerabilities found in regular security reviews."
         ]
       },
       "internal": {
@@ -125,8 +125,7 @@
           "Built full-stack applications with Next.js and React front ends and back ends in Node.js with Express, or C# and .NET, integrating third-party REST APIs over API keys and OAuth.",
           "Provisioned infrastructure as code with Terraform and AWS CDK, and worked on the CI/CD pipelines and cloud deployments around it.",
           "Built serverless back ends on Lambda, API Gateway, SQS, SNS and Step Functions, with DynamoDB, S3, SES, Route 53, ACM and CloudWatch.",
-          "Moved Lambda workloads from public networking into private VPC subnets, with Transit Gateway for private connectivity.",
-          "Helped migrate a complete platform from AWS to Azure, including its data from DynamoDB to Cosmos DB."
+          "Migrated a complete platform from AWS to Azure."
         ]
       },
       "independent": {

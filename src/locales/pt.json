@@ -99,8 +99,8 @@
             "text": "Refiz o sistema de login e migrei todas as contas existentes para um novo provedor de identidade."
           },
           {
-            "title": "Migrações na nuvem",
-            "text": "Levei workloads do Lambda para sub-redes privadas de VPC via Transit Gateway e ajudei a migrar uma plataforma da AWS para o Azure."
+            "title": "Migração da AWS para o Azure",
+            "text": "Migrei uma plataforma inteira da AWS para o Azure."
           }
         ]
       },
@@ -114,7 +114,7 @@
           "Refiz a autenticação e migrei todas as contas de usuário existentes para um novo provedor de identidade.",
           "Criei do zero a seção de análise de mapas do painel: gráficos e filtros sobre contribuições e perfil demográfico, alimentados pela API GraphQL.",
           "Desenvolvi e estabilizei os mapas interativos, com pontos, desenho de polígonos e marcadores SVG próprios, guardando os dados geográficos no PostGIS e trocando-os em GeoJSON.",
-          "Mantive a produção saudável no AWS EKS com Kubernetes, Helm e Docker: otimizei serviços em Node.js e consultas no MongoDB com novos índices, e corrigi falhas apontadas nos testes de invasão."
+          "Mantive a produção saudável no AWS EKS com Kubernetes, Helm e Docker: otimizei serviços em Node.js e consultas no MongoDB, e corrigi vulnerabilidades encontradas em revisões de segurança periódicas."
         ]
       },
       "internal": {
@@ -125,8 +125,7 @@
           "Construí aplicações full-stack com front-end em Next.js e React e back-end em Node.js com Express, ou em C# e .NET, integrando APIs REST de terceiros com chaves de API e OAuth.",
           "Provisionei infraestrutura como código com Terraform e AWS CDK, e trabalhei nos pipelines de CI/CD e nos deploys na nuvem em torno dela.",
           "Construí back-ends serverless com Lambda, API Gateway, SQS, SNS e Step Functions, usando DynamoDB, S3, SES, Route 53, ACM e CloudWatch.",
-          "Levei workloads do Lambda da rede pública para sub-redes privadas de VPC, com Transit Gateway para a conectividade privada.",
-          "Ajudei a migrar uma plataforma inteira da AWS para o Azure, incluindo os dados do DynamoDB para o Cosmos DB."
+          "Migrei uma plataforma inteira da AWS para o Azure."
         ]
       },
       "independent": {

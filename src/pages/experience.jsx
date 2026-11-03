@@ -17,7 +17,7 @@ const WESTPOINT = [
     id: 'internal',
     tags: [
       'React', 'Next.js', 'Node.js', 'Express', 'C# / .NET', 'Terraform', 'AWS CDK', 'Lambda',
-      'API Gateway', 'VPC', 'Transit Gateway', 'DynamoDB', 'Azure', 'Cosmos DB', 'OAuth',
+      'API Gateway', 'DynamoDB', 'Azure', 'Cosmos DB', 'OAuth',
     ],
   },
 ];
