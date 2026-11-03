@@ -84,36 +84,49 @@
         "title": "Westpoint",
         "period": "Junho de 2022 até hoje",
         "role": "Engenheiro de software full-stack",
-        "summary": "Consultoria de engenharia de software do Reino Unido que aloca seus engenheiros em times de clientes e constrói projetos próprios. Trabalhei nos dois, de novas funcionalidades a suporte em produção e infraestrutura na nuvem."
+        "summary": "Consultoria de engenharia de software do Reino Unido que aloca engenheiros em times de clientes e constrói produtos próprios. Trabalho em todo o stack: front-ends em React e Next.js, back-ends em Node.js, GraphQL e C#, e a infraestrutura na AWS e no Azure onde eles rodam, de Kubernetes no EKS a Terraform e AWS CDK.",
+        "highlights": [
+          {
+            "title": "Migração após aquisição",
+            "text": "Ajudei a levar contas de prefeituras, usuários e consultas para a plataforma da empresa compradora, sem downtime nem perda de dados."
+          },
+          {
+            "title": "Novo fluxo de contribuição",
+            "text": "Liderei a reformulação do caminho que os moradores percorrem para participar das consultas públicas."
+          },
+          {
+            "title": "Reformulação da autenticação",
+            "text": "Refiz o sistema de login e migrei todas as contas existentes para um novo provedor de identidade."
+          },
+          {
+            "title": "Migrações na nuvem",
+            "text": "Levei workloads do Lambda para sub-redes privadas de VPC via Transit Gateway e ajudei a migrar uma plataforma da AWS para o Azure."
+          }
+        ]
       },
       "civic": {
-        "file": "plataforma-civica.log",
         "title": "Plataforma de participação cidadã",
-        "summary": "Projeto de cliente: plataforma de participação que prefeituras do Reino Unido usam para fazer consultas públicas e transformar a opinião da comunidade em evidência para suas decisões. As prefeituras criam pesquisas e propostas, e os moradores respondem, comentam e marcam suas opiniões num mapa.",
+        "meta": "Projeto de cliente",
+        "summary": "Plataforma que prefeituras do Reino Unido usam para fazer consultas públicas. As prefeituras publicam pesquisas e propostas; os moradores respondem, comentam e marcam suas opiniões num mapa. Trabalhei diariamente com times de engenharia no Reino Unido, Canadá e Israel.",
         "bullets": [
-          "Desenvolvimento de novas funcionalidades e integrações, correção de bugs e suporte em produção",
-          "Depois que a empresa foi adquirida no fim de 2025, mantive a plataforma no ar e migrei contas de clientes, usuários e consultas para a plataforma da nova dona sem downtime e sem perda de dados, para que as prefeituras mudassem sem transtornos",
-          "Liderei a reformulação do fluxo de contribuição, o caminho que o morador percorre para responder uma pesquisa",
-          "Criei do zero a seção de análise de mapas do painel das prefeituras, transformando os dados do back-end em gráficos e filtros, e ampliei os gráficos de perfil demográfico e de contribuições dos moradores",
-          "Desenvolvimento e correção dos mapas interativos, onde os moradores marcam pontos, desenham polígonos e colocam marcadores SVG próprios, com os dados geográficos no PostGIS e em GeoJSON, e estabilização de páginas de mapa que travavam",
-          "Reformulação do sistema de login e migração de todas as contas de usuário para uma nova plataforma de identidade",
-          "Eliminação de gargalos nos serviços de back-end em Node.js, incluindo índices no MongoDB para consultas lentas",
-          "Correção de vulnerabilidades encontradas nos testes de invasão trimestrais",
-          "Deploy no AWS EKS com Kubernetes, Helm e Docker, junto com Lambda, SQS, SNS e Step Functions",
-          "Trabalho diário com times no Reino Unido, Canadá e Israel"
+          "Ajudei a migrar contas de clientes, usuários e consultas para a plataforma da empresa compradora após a aquisição no fim de 2025, mantendo a plataforma original no ar para que as prefeituras mudassem sem downtime nem perda de dados.",
+          "Liderei a reformulação do fluxo de contribuição, o caminho que o morador percorre para responder uma pesquisa e participar de uma consulta.",
+          "Refiz a autenticação e migrei todas as contas de usuário existentes para um novo provedor de identidade.",
+          "Criei do zero a seção de análise de mapas do painel: gráficos e filtros sobre contribuições e perfil demográfico, alimentados pela API GraphQL.",
+          "Desenvolvi e estabilizei os mapas interativos, com pontos, desenho de polígonos e marcadores SVG próprios, guardando os dados geográficos no PostGIS e trocando-os em GeoJSON.",
+          "Mantive a produção saudável no AWS EKS com Kubernetes, Helm e Docker: otimizei serviços em Node.js e consultas no MongoDB com novos índices, e corrigi falhas apontadas nos testes de invasão."
         ]
       },
       "internal": {
-        "file": "projetos-internos.log",
-        "title": "Projetos internos",
-        "summary": "Produtos da própria Westpoint. O stack mudava de projeto para projeto.",
+        "title": "Produtos internos e engenharia de nuvem",
+        "meta": "Projetos da Westpoint",
+        "summary": "Produtos e projetos de engenharia da própria Westpoint. Cada um tinha sua arquitetura e seu stack, então o trabalho passava pelo front-end, pelo back-end e pela infraestrutura na nuvem por baixo deles.",
         "bullets": [
-          "Front-end em Next.js ou React; back-end em C# / .NET ou em Node.js com Express",
-          "Infraestrutura como código com Terraform ou AWS CDK, além de pipelines de deploy e automação de infraestrutura",
-          "Trabalho serverless com Lambda, API Gateway, SQS, SNS, Step Functions, S3, SES, DynamoDB, Route 53, ACM e CloudWatch",
-          "Migração de workloads do AWS Lambda para sub-redes privadas de VPC, com Transit Gateway para conectividade privada",
-          "Migração de uma plataforma inteira da AWS para o Azure, incluindo os dados do DynamoDB para o Cosmos DB",
-          "Integração com APIs REST de terceiros usando chaves de API e OAuth"
+          "Construí aplicações full-stack com front-end em Next.js e React e back-end em Node.js com Express, ou em C# e .NET, integrando APIs REST de terceiros com chaves de API e OAuth.",
+          "Provisionei infraestrutura como código com Terraform e AWS CDK, e trabalhei nos pipelines de CI/CD e nos deploys na nuvem em torno dela.",
+          "Construí back-ends serverless com Lambda, API Gateway, SQS, SNS e Step Functions, usando DynamoDB, S3, SES, Route 53, ACM e CloudWatch.",
+          "Levei workloads do Lambda da rede pública para sub-redes privadas de VPC, com Transit Gateway para a conectividade privada.",
+          "Ajudei a migrar uma plataforma inteira da AWS para o Azure, incluindo os dados do DynamoDB para o Cosmos DB."
         ]
       },
       "independent": {
@@ -129,6 +142,8 @@
           "Hide Instagram Elements: publicada na loja de complementos do Firefox, feita em TypeScript com Preact e Vite para Firefox e Chrome"
         ]
       }
-    }
+    },
+    "highlightsLabel": "Destaques",
+    "stackLabel": "Stack"
   }
 }

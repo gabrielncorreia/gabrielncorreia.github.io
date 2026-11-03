@@ -84,36 +84,49 @@
         "title": "Westpoint",
         "period": "June 2022 to present",
         "role": "Full-stack software engineer",
-        "summary": "A UK software engineering consultancy that places its engineers with client teams and builds projects of its own. I have worked on both, from new features to production support and cloud infrastructure."
+        "summary": "A UK software engineering consultancy that embeds engineers in client teams and builds its own products. I work across the whole stack: React and Next.js front ends, Node.js, GraphQL and C# back ends, and the AWS and Azure infrastructure they run on, from Kubernetes on EKS to Terraform and AWS CDK.",
+        "highlights": [
+          {
+            "title": "Post-acquisition migration",
+            "text": "Helped move council accounts, users and consultations into the acquiring company’s platform with no downtime or data loss."
+          },
+          {
+            "title": "Contribution flow redesign",
+            "text": "Led the rework of the survey journey residents use to take part in public consultations."
+          },
+          {
+            "title": "Authentication rework",
+            "text": "Reworked the login system and moved every existing account to a new identity provider."
+          },
+          {
+            "title": "Cloud migrations",
+            "text": "Moved Lambda workloads into private VPC subnets over Transit Gateway, and helped move a platform from AWS to Azure."
+          }
+        ]
       },
       "civic": {
-        "file": "civic-platform.log",
         "title": "Civic engagement platform",
-        "summary": "A client project: an engagement platform UK local councils use to run public consultations and turn community feedback into evidence for their decisions. Councils build surveys and proposals, and residents answer them, comment and share their views on a map.",
+        "meta": "Client project",
+        "summary": "A platform UK local councils use to run public consultations. Councils publish surveys and proposals; residents respond, comment and pin their feedback to a map. I worked daily with engineering teams in the UK, Canada and Israel.",
         "bullets": [
-          "Built new features and integrations, fixed bugs and supported the platform in production",
-          "After the company was acquired in late 2025, kept the platform running and migrated customer accounts, users and consultations to the new owner’s platform with no downtime and no data lost, so councils moved over without disruption",
-          "Led the rework of the contribution flow, the journey residents follow to complete a survey",
-          "Built the map analytics section of the council dashboard from scratch, turning back-end data into charts and filters, and extended the charts on residents’ demographics and contributions",
-          "Developed and fixed the interactive maps, where residents drop pins, draw polygons and place custom SVG markers, with the geodata in PostGIS and GeoJSON, and made crash-prone map pages stable",
-          "Reworked the login system and migrated every user account to a new identity platform",
-          "Removed back-end bottlenecks in the Node.js services, including MongoDB indexes for slow queries",
-          "Fixed vulnerabilities found in the quarterly penetration tests",
-          "Ran on AWS EKS with Kubernetes, Helm and Docker, alongside Lambda, SQS, SNS and Step Functions",
-          "Worked daily with teams in the UK, Canada and Israel"
+          "Helped migrate customer accounts, users and consultations into the acquiring company’s platform after the late-2025 acquisition, keeping the original platform running so councils switched over with no downtime or data loss.",
+          "Led the redesign of the contribution flow, the survey journey residents complete to take part in a consultation.",
+          "Reworked authentication and migrated every existing user account to a new identity provider.",
+          "Built the dashboard’s map analytics section from scratch: charts and filters over contributions and demographics, fed by the GraphQL API.",
+          "Developed and stabilised the interactive maps, with pins, polygon drawing and custom SVG markers, storing geodata in PostGIS and exchanging it as GeoJSON.",
+          "Kept production healthy on AWS EKS with Kubernetes, Helm and Docker: optimised Node.js services and MongoDB queries with new indexes, and fixed penetration-test findings."
         ]
       },
       "internal": {
-        "file": "internal-projects.log",
-        "title": "Internal projects",
-        "summary": "Westpoint’s own products. The stack changed from project to project.",
+        "title": "Internal products and cloud engineering",
+        "meta": "Westpoint projects",
+        "summary": "Westpoint’s own products and engineering projects. Each had its own architecture and stack, so the work moved between front end, back end and the cloud infrastructure underneath.",
         "bullets": [
-          "Front ends in Next.js or React; back ends in C# / .NET or in Node.js with Express",
-          "Infrastructure as code with Terraform or AWS CDK, plus deployment pipelines and infrastructure automation",
-          "Serverless work on Lambda, API Gateway, SQS, SNS, Step Functions, S3, SES, DynamoDB, Route 53, ACM and CloudWatch",
-          "Moved AWS Lambda workloads into private VPC subnets, with Transit Gateway for private connectivity",
-          "Moved a whole platform from AWS to Azure, including its data from DynamoDB to Cosmos DB",
-          "Integrated third-party REST APIs with API keys and OAuth"
+          "Built full-stack applications with Next.js and React front ends and back ends in Node.js with Express, or C# and .NET, integrating third-party REST APIs over API keys and OAuth.",
+          "Provisioned infrastructure as code with Terraform and AWS CDK, and worked on the CI/CD pipelines and cloud deployments around it.",
+          "Built serverless back ends on Lambda, API Gateway, SQS, SNS and Step Functions, with DynamoDB, S3, SES, Route 53, ACM and CloudWatch.",
+          "Moved Lambda workloads from public networking into private VPC subnets, with Transit Gateway for private connectivity.",
+          "Helped migrate a complete platform from AWS to Azure, including its data from DynamoDB to Cosmos DB."
         ]
       },
       "independent": {
@@ -129,6 +142,8 @@
           "Hide Instagram Elements: published on the Firefox Add-ons store, built in TypeScript with Preact and Vite for Firefox and Chrome"
         ]
       }
-    }
+    },
+    "highlightsLabel": "Selected highlights",
+    "stackLabel": "Stack"
   }
 }

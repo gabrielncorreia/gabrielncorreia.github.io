@@ -4,20 +4,20 @@ import './projects.css';
 import Bar from '../components/Bar';
 import Tile from '../components/Tile';
 
-// Work done at Westpoint, largest first. Ids are translation keys under experience.items.
+// Westpoint projects, largest first. Ids are translation keys under experience.items.
 const WESTPOINT = [
   {
     id: 'civic',
     tags: [
-      'Next.js', 'TypeScript', 'GraphQL', 'MongoDB', 'PostgreSQL / PostGIS', 'GeoJSON',
+      'Next.js', 'TypeScript', 'GraphQL', 'Node.js', 'MongoDB', 'PostgreSQL / PostGIS', 'GeoJSON',
       'AWS EKS', 'Kubernetes', 'Helm', 'Docker', 'Lambda', 'SQS', 'SNS', 'Step Functions',
     ],
   },
   {
     id: 'internal',
     tags: [
-      'Next.js', 'React', 'C# / .NET', 'Node.js', 'Express', 'Terraform', 'AWS CDK',
-      'Lambda', 'API Gateway', 'VPC', 'DynamoDB', 'Step Functions', 'Azure', 'Cosmos DB',
+      'React', 'Next.js', 'Node.js', 'Express', 'C# / .NET', 'Terraform', 'AWS CDK', 'Lambda',
+      'API Gateway', 'VPC', 'Transit Gateway', 'DynamoDB', 'Azure', 'Cosmos DB', 'OAuth',
     ],
   },
 ];
@@ -33,11 +33,10 @@ const tagList = (tags) => (
 export default function Experience() {
   const { t } = useTranslation();
   const item = (id, key) => t(`experience.items.${id}.${key}`);
+  const list = (id, key) => t(`experience.items.${id}.${key}`, { returnObjects: true });
   const bullets = (id) => (
     <ul className="bullets">
-      {t(`experience.items.${id}.bullets`, { returnObjects: true }).map((bullet) => (
-        <li key={bullet}>{bullet}</li>
-      ))}
+      {list(id, 'bullets').map((bullet) => <li key={bullet}>{bullet}</li>)}
     </ul>
   );
 
@@ -63,16 +62,31 @@ export default function Experience() {
             <span>{item('westpoint', 'period')}</span>
           </p>
           <p>{item('westpoint', 'summary')}</p>
-          <div className="work-sections">
-            {WESTPOINT.map(({ id, tags }) => (
-              <section key={id} className="work-section">
-                <h3>{item(id, 'title')}</h3>
-                <p>{item(id, 'summary')}</p>
-                {bullets(id)}
-                {tagList(tags)}
-              </section>
+
+          <h3 className="strengths-label">{t('experience.highlightsLabel')}</h3>
+          <ul className="highlight-list">
+            {list('westpoint', 'highlights').map(({ title, text }) => (
+              <li key={title}>
+                <h4>{title}</h4>
+                <p>{text}</p>
+              </li>
             ))}
-          </div>
+          </ul>
+
+          {WESTPOINT.map(({ id, tags }) => (
+            <section key={id} className="work-project" aria-labelledby={`work-${id}`}>
+              <div className="work-project-head">
+                <h3 id={`work-${id}`}>{item(id, 'title')}</h3>
+                <p className="work-meta">{item(id, 'meta')}</p>
+                <p>{item(id, 'summary')}</p>
+              </div>
+              {bullets(id)}
+              <div className="work-project-stack">
+                <h4 className="strengths-label">{t('experience.stackLabel')}</h4>
+                {tagList(tags)}
+              </div>
+            </section>
+          ))}
         </Tile>
 
         <Tile title={item('independent', 'file')} className="tile-project tile-work tile-wide">

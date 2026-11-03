@@ -154,30 +154,112 @@
   grid-column: 1 / -1;
 }
 
-.work-sections {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-  gap: 28px;
-  margin-top: 8px;
-}
-
-/* Each section stacks like a small window: bullets grow so the tags line up at the bottom. */
-.work-section {
-  display: flex;
-  flex-direction: column;
-  padding-top: 16px;
+/* A soft rule between blocks inside one window. */
+.highlight-list li,
+.work-project {
   border-top: 1px solid rgba(147, 167, 184, 0.3);
 }
 
-/* Sections differ in length; tags follow their own bullets instead of a shared bottom line. */
-.tile-work .work-section .bullets {
-  flex: none;
+/* Headline achievements: short, scannable, ruled rather than boxed. */
+.highlight-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: 18px 32px;
+  margin: 0 0 8px;
+  padding: 0;
+  list-style: none;
 }
 
-.work-section h3 {
+.highlight-list li {
+  padding-top: 12px;
+}
+
+.highlight-list h4 {
   margin: 0;
   font-family: var(--font-code);
-  font-size: 1.25rem;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.tile-work .tile-body .highlight-list p {
+  max-width: none;
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* One row per project: context and stack on the left, achievements on the right.
+   Narrow screens fall back to source order: context, achievements, then stack. */
+.work-project {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr);
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "head list" "stack list";
+  gap: 0 40px;
+  margin-top: 32px;
+  padding-top: 24px;
+}
+
+.work-project h3 {
+  margin: 0;
+  font-family: var(--font-code);
+  font-size: 1.375rem;
   font-weight: 500;
   line-height: 1.2;
+  text-wrap: balance;
+}
+
+.work-project-head {
+  grid-area: head;
+}
+
+.work-project-stack {
+  grid-area: stack;
+}
+
+.tile-work .tile-body .work-project-head .work-meta {
+  margin: 6px 0 0;
+}
+
+.tile-work .tile-body .work-project-head p:not(.work-meta) {
+  max-width: none;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.work-project-stack .strengths-label {
+  margin: 18px 0 8px;
+}
+
+.work-project-stack .tags {
+  margin: 0;
+}
+
+.tile-work .tile-body .work-project .bullets {
+  grid-area: list;
+  flex: none;
+  max-width: 78ch;
+  margin: 0;
+}
+
+.work-project .bullets li + li {
+  margin-top: 12px;
+}
+
+@media (max-width: 860px) {
+  .work-project {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    grid-template-areas: "head" "list" "stack";
+  }
+
+  .tile-work .tile-body .work-project .bullets {
+    margin-top: 18px;
+  }
 }
