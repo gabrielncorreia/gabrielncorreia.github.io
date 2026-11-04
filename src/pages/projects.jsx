@@ -7,12 +7,14 @@ import Tile from '../components/Tile';
 const GITHUB = 'https://github.com/gabrielncorreia';
 
 // Strongest first. `repo` is the GitHub repo name and the translation key;
-// `live` means it is deployed to GitHub Pages at gabrielncorreia.github.io/<repo>.
+// `live: true` means it is deployed to GitHub Pages at gabrielncorreia.github.io/<repo>;
+// a URL string points the live demo link there instead.
 const PROJECTS = [
   {
     repo: 'TFC',
     name: 'Trybe Futebol Clube',
     tags: ['TypeScript', 'Node.js', 'Express', 'Sequelize', 'MySQL', 'JWT', 'Docker', 'Mocha'],
+    live: 'https://tfc-gabrielncorreia.vercel.app',
   },
   {
     repo: 'frontend-online-store', name: 'Vitrine', tags: ['React', 'Context API', 'Cloudflare Workers', 'Turnstile'], live: true,
@@ -92,7 +94,7 @@ export default function Projects() {
             </ul>
             <div className="project-links">
               {live && (
-                <a href={`https://gabrielncorreia.github.io/${repo}/`} target="_blank" rel="noreferrer">
+                <a href={live === true ? `https://gabrielncorreia.github.io/${repo}/` : live} target="_blank" rel="noreferrer">
                   {t('projects.liveDemo')}
                 </a>
               )}
