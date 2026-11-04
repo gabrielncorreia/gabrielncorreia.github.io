@@ -13,7 +13,7 @@ const PROJECTS = [
   {
     repo: 'TFC',
     name: 'Trybe Futebol Clube',
-    tags: ['TypeScript', 'Node.js', 'Express', 'Sequelize', 'MySQL', 'JWT', 'Docker', 'Mocha'],
+    tags: ['TypeScript', 'Node.js', 'Express', 'Sequelize', 'MySQL', 'JWT', 'React', 'Vercel', 'Docker', 'Mocha'],
     live: 'https://tfc-gabrielncorreia.vercel.app',
   },
   {

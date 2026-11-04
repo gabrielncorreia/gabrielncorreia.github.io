@@ -31,7 +31,7 @@
     "heading": "Meus projetos",
     "intro": "O que construo no meu tempo livre, e os projetos que fiz enquanto aprendia a programar no bootcamp da Trybe. Tudo o que é público está no <github>GitHub</github>.",
     "items": {
-      "TFC": "API de partidas e classificação de futebol com login via JWT, feita em TypeScript com Express e Sequelize sobre MySQL. Roda em Docker e tem testes de integração.",
+      "TFC": "Um app de campeonato de futebol: classificação ao vivo, partidas e um editor de placar para administradores. A API é feita em TypeScript com Express e Sequelize, com login via bcrypt e JWT, controle de papéis e limite de tentativas, e tem testes de integração. Depois do bootcamp, redesenhei o front end em React, adicionei inglês e português e publiquei tudo na Vercel e no TiDB Cloud, com uma rotina noturna que restaura os dados da demonstração.",
       "frontend-online-store": "Começou como projeto em grupo na Trybe: loja virtual com produtos reais do Mercado Livre e preços em reais, categorias, busca, avaliações e carrinho. Quando o Mercado Livre fechou a busca pública em 2026, escrevi um Cloudflare Worker para mantê-la funcionando. O Worker guarda as credenciais da API e só atende as minhas duas lojas, por meio de sessões verificadas pelo Turnstile e assinadas com HMAC. Ele valida toda entrada antes de chamar o Mercado Livre e limita as requisições de cada visitante.",
       "shopping-cart": "Loja de página única em JavaScript puro com produtos reais do Mercado Livre e um carrinho em forma de cupom fiscal. Lê do mesmo Worker e passa pela mesma verificação do Turnstile antes de receber qualquer dado."
     },

@@ -31,7 +31,7 @@
     "heading": "My projects",
     "intro": "What I build on my own time, plus the projects I made while learning to program at the Trybe bootcamp. Everything public is on <github>GitHub</github>.",
     "items": {
-      "TFC": "Football matches and standings API with JWT login, built in TypeScript with Express and Sequelize on MySQL. Runs in Docker and is covered by integration tests.",
+      "TFC": "A football league app: live standings, matches and a score editor for admins. The API is TypeScript with Express and Sequelize, with bcrypt and JWT login, role checks and rate limiting, and is covered by integration tests. After the bootcamp I redesigned the React front end, added English and Portuguese, and deployed it on Vercel and TiDB Cloud, with a nightly job that restores the demo data.",
       "frontend-online-store": "Started as a Trybe group project: an online store with real Mercado Livre products and prices in reais, categories, search, reviews and a cart. When Mercado Livre closed its public search in 2026, I wrote a Cloudflare Worker to keep it running. The Worker holds the API credentials and serves only my two storefronts, through Turnstile-verified sessions signed with HMAC. It validates every input before calling Mercado Livre and rate-limits each visitor.",
       "shopping-cart": "A single-page store in plain JavaScript with real Mercado Livre products and a receipt-style cart. It reads from the same Worker and passes the same Turnstile check before it gets any data."
     },
