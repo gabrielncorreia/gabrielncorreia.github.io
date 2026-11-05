@@ -58,7 +58,8 @@
         "about": "A Firefox and Chrome extension that hides chosen parts of Instagram web, such as the feed, stories and suggestions, from a popup of toggles. Built with injected CSS so it survives Instagram re-rendering, and published on the Firefox Add-ons store."
       }
     },
-    "firefoxStore": "Firefox Add-ons"
+    "firefoxStore": "Firefox Add-ons",
+    "wip": "Work in progress"
   },
   "experience": {
     "title": "experience.md",

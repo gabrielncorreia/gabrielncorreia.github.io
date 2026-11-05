@@ -36,7 +36,9 @@ const SIDE_PROJECTS = [
     tags: ['PixiJS v8', 'React', 'TypeScript', 'Vite', 'Wikidata'],
     live: 'https://ecclesia-7o1.pages.dev/',
   },
-  { id: 'crivo', tags: ['TypeScript', 'LLM', 'WebExtensions', 'Cloudflare Workers'] },
+  {
+    id: 'crivo', tags: ['TypeScript', 'LLM', 'WebExtensions', 'Cloudflare Workers'], wip: true,
+  },
   {
     id: 'instagram',
     tags: ['TypeScript', 'Preact', 'Vite', 'WebExtensions'],
@@ -65,10 +67,13 @@ export default function Projects() {
 
         <h2 className="section-heading">{t('projects.sideHeading')}</h2>
         {SIDE_PROJECTS.map(({
-          id, tags, live, store,
+          id, tags, live, store, wip,
         }) => (
           <Tile key={id} title={id} className="tile-project">
-            <h2>{t(`projects.side.${id}.name`)}</h2>
+            <h2>
+              {t(`projects.side.${id}.name`)}
+              {wip && <span className="wip-badge">{t('projects.wip')}</span>}
+            </h2>
             <p>{t(`projects.side.${id}.about`)}</p>
             <ul className="tags">
               {tags.map((tag) => <li key={tag}>{tag}</li>)}

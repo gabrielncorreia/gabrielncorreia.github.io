@@ -58,7 +58,8 @@
         "about": "Extensão para Firefox e Chrome que esconde partes escolhidas do Instagram web, como o feed, os stories e as sugestões, a partir de um popup com chaves. Usa CSS injetado, que resiste às re-renderizações do Instagram, e está publicada na loja de complementos do Firefox."
       }
     },
-    "firefoxStore": "Ver na loja do Firefox"
+    "firefoxStore": "Ver na loja do Firefox",
+    "wip": "Em desenvolvimento"
   },
   "experience": {
     "title": "experiencia.md",
